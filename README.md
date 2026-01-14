@@ -51,11 +51,40 @@ Human Reference Model    →    Manikin Characterization    →    Fidelity Gap 
 
 The perspective paper argues *for* engineering fidelity; this paper provides the *tools to measure* it.
 
-## Files
+## Current Status
 
-- `MST_paper_outline.md` - Detailed paper outline
-- `MST_paper_supervisor_summary.md` - Executive summary for supervisors
-- `CLAUDE.md` - AI assistant guidance
+| Section | Status |
+|---------|--------|
+| 1. Introduction | Draft complete |
+| 2. Human Reference Model | Draft complete |
+| 3. Uncertainty Envelope | Draft complete |
+| 4. Manikin Characterization Protocol | Draft complete |
+| 5. Results | Awaiting data collection |
+| 6. Engineering Fidelity Index | Draft complete |
+| 7. Discussion | Draft complete |
+| 8. Conclusion | Draft complete |
+
+**Next steps:** Data collection (target: mid-February 2026)
+
+## Repository Structure
+
+```
+├── MST_paper_outline.md          # Detailed paper outline
+├── MST_paper_supervisor_summary.md  # Executive summary for supervisors
+├── CLAUDE.md                     # AI assistant guidance
+└── working/
+    ├── paper_draft.md            # Current paper draft (~4,750 words)
+    ├── literature_review.md      # Comprehensive literature synthesis
+    ├── apparatus_expansion.md    # Hardware requirements for manikin testing
+    ├── data_collection_checklist.md  # Testing protocol checklist
+    ├── articles/                 # Converted reference papers (markdown)
+    ├── datasheets/               # Bronkhorst MFM documentation
+    │   ├── 6264-ff-m11-en-datasheet.md
+    │   ├── 917158-manual-flexi-flow-compact.md
+    │   └── N0551_N2510646_A_m.md
+    └── scripts/
+        └── ventilation_mechanics.py  # C/R calculation module
+```
 
 ## Key References
 
