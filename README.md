@@ -30,6 +30,26 @@ Human Reference Model    →    Manikin Characterization    →    Fidelity Gap 
 - Quantified engineering fidelity index for manikin procurement decisions
 - Novel ventilation fidelity analysis (largely unstudied area)
 
+## Engineering Fidelity Index (EFI)
+
+The EFI is a quantified metric to score how well a manikin replicates human biomechanics:
+
+```
+EFI = w_c * F_compression + w_v * F_ventilation
+```
+
+| Component | Description |
+|-----------|-------------|
+| F_compression | Normalized score for stiffness + damping within human envelope |
+| F_ventilation | Normalized score for compliance + resistance within human envelope |
+| w_c, w_v | Weighting factors (adjustable based on training priorities) |
+
+**Scoring:**
+- **EFI = 1.0** - Perfect match to human reference center
+- **EFI = 0.0** - Deviation equals full envelope width
+
+Higher EFI = more physiologically realistic manikin. This provides training centers a single number to compare manikins for procurement decisions.
+
 ## Paper Structure
 
 1. **Introduction** - Engineering fidelity concept and research gap
