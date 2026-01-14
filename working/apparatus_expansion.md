@@ -130,73 +130,133 @@ def fit_gruben_model(force, displacement, velocity):
 
 ## 3. Ventilation Apparatus Expansion
 
-### 3.1 Compliance/Resistance Calculation
+### 3.1 Sensor Requirements Analysis
 
-**No hardware changes needed** — derive from existing pressure and volume data.
+**Calculating respiratory compliance and resistance requires:**
+1. **Pressure (P)** — airway pressure during ventilation cycle
+2. **Flow (V̇)** — volumetric flow rate
+3. **Volume (V)** — derived by integrating flow, or from direct measurement
 
-**Compliance calculation:**
-```python
-def calculate_compliance(volume_ml, pressure_cmH2O):
-    """
-    C_rs = ΔV / ΔP [mL/cmH₂O]
+**Formulas:**
+- Compliance: C_rs = ΔV / ΔP [mL/cmH₂O]
+- Resistance: R_rs = ΔP / V̇ [cmH₂O·s/L]
 
-    Use peak-to-baseline pressure difference
-    """
-    delta_V = np.max(volume_ml) - np.min(volume_ml)
-    delta_P = np.max(pressure_cmH2O) - np.min(pressure_cmH2O)
-    return delta_V / delta_P
+### 3.2 Available Sensors
+
+| Sensor | Parameter | Range | Accuracy | Suitability |
+|--------|-----------|-------|----------|-------------|
+| **Bronkhorst MFM FF-M11** | Flow | 4–2000 mln/min | ±0.8% Rd + ±0.2% FS | ✅ Excellent |
+| **Bronkhorst MFM FF-M11** | Pressure | 0–17 bar(a) max | ±0.5% FS | ⚠️ Verify range setting |
+| **Sensirion SDP810-500Pa** | Pressure | ±500 Pa | ±0.75% Rd | ✅ Appropriate |
+
+**Analysis:**
+
+The MFM has integrated pressure sensors (upstream P1 and downstream P2) with maximum range 0–17 bar(a). At full scale:
+- ±0.5% FS would give ±0.085 bar = ±85 mbar ≈ ±85 cmH₂O resolution
+- Ventilation pressures are typically 0–50 cmH₂O
+- **At full 17 bar range, the MFM pressure sensors may be too coarse for ventilation mechanics**
+
+However, the pressure range may be configurable to a narrower span more suitable for low-pressure applications. Verify in FlowSuite or instrument settings whether a lower pressure range can be selected, which would improve resolution proportionally.
+
+The DPS (SDP810-500Pa) is designed for low differential pressures:
+- Range: ±500 Pa ≈ ±5 cmH₂O
+- Resolution: suitable for ventilation measurements
+
+**⚠️ Range verification needed:** Typical infant PIP is 15–25 cmH₂O (~1500–2500 Pa). If using SDP810-500Pa (±500 Pa), verify this is sufficient or consider SDP800-series with higher range (e.g., SDP816 with 500–1000 Pa full scale, or external amplification).
+
+### 3.3 Recommended Configuration
+
+```
+                    Ventilation Circuit
+                          │
+        ┌─────────────────┼─────────────────┐
+        │                 │                 │
+   ┌────┴────┐      ┌─────┴─────┐     ┌─────┴─────┐
+   │ Syringe │      │    MFM    │     │   DPS     │
+   │ Actuator│      │  FF-M11   │     │ SDP810    │
+   └────┬────┘      └─────┬─────┘     └─────┬─────┘
+        │                 │                 │
+        │            FLOW ✅          PRESSURE ✅
+        │          (4–2000 mln/min)    (±500 Pa)
+        │          ±0.8% Rd + 0.2% FS  ±0.75% Rd
+        │                 │                 │
+        └─────────────────┴─────────────────┘
+                          │
+                    ┌─────┴─────┐
+                    │  Manikin  │
+                    │  Airway   │
+                    └───────────┘
 ```
 
-**Resistance calculation:**
-```python
-def calculate_resistance(pressure_cmH2O, flow_Lps):
-    """
-    R_rs = ΔP / V̇_peak [cmH₂O·s/L]
+**Sensor roles:**
+| Measurement | Sensor | Why |
+|-------------|--------|-----|
+| Flow | MFM | High accuracy, SI-traceable, real-time |
+| Pressure | DPS | Appropriate range for airway pressures |
+| Volume | Derived | Integrate flow or use syringe position |
 
-    Use peak flow and corresponding pressure
-    """
-    # Find peak flow
-    peak_flow_idx = np.argmax(np.abs(flow_Lps))
-    peak_flow = flow_Lps[peak_flow_idx]
+### 3.4 Data Requirements for Mechanics Calculation
 
-    # Pressure at peak flow (approximate)
-    pressure_at_peak = pressure_cmH2O[peak_flow_idx]
+**Minimum data logged per cycle:**
+- Timestamp (ms resolution)
+- Pressure from DPS (Pa or cmH₂O)
+- Flow from MFM (mln/min → L/s)
+- Syringe position (optional backup for volume)
 
-    return pressure_at_peak / peak_flow
-```
+**Derived parameters:**
+- Volume: V(t) = ∫ V̇(t) dt
+- Compliance: C = ΔV / ΔP
+- Resistance: R = ΔP / V̇_peak
 
-### 3.2 Enhanced Analysis
+### 3.5 Compliance Calculation Method
 
-**New metrics to extract:**
-- Peak inspiratory pressure (PIP)
-- Plateau pressure (if inspiratory hold possible)
-- Peak flow rate
-- Time to peak flow
-- Pressure-volume loop area (work of breathing)
+**Static compliance (quasi-static conditions):**
+- Measure plateau pressure after inspiratory hold
+- C_rs = V_T / (P_plat - PEEP)
 
-**Visualization additions:**
-- Pressure-volume loops
-- Compliance vs. volume (nonlinearity assessment)
-- Flow-volume loops
+**Dynamic compliance (during breathing):**
+- Use pressure and volume at end-inspiration
+- C_dyn = V_T / (PIP - PEEP)
 
-### 3.3 Unit Conversion
+**Our approach:** Since the syringe actuator provides controlled volume delivery, we can use dynamic compliance during the ventilation cycle. The MFM provides high-accuracy volume reference.
 
-**Reference data uses different units — ensure consistency:**
+### 3.6 Resistance Calculation Method
+
+**Peak flow method:**
+- R_rs = (PIP - P_plat) / V̇_peak
+
+**Mean flow method:**
+- R_rs = mean pressure / mean flow during inspiration
+
+**Our approach:** Use instantaneous pressure at peak flow, since we log synchronized P and V̇ data.
+
+### 3.7 Unit Conversions
+
+**Reference data (Huang 2016) uses SI units:**
 
 | Parameter | Huang 2016 | Our measurement | Conversion |
 |-----------|------------|-----------------|------------|
-| Compliance | mL/kPa | mL/cmH₂O | 1 kPa = 10.2 cmH₂O |
-| Resistance | kPa/L/s | cmH₂O/L/s | 1 kPa = 10.2 cmH₂O |
+| Compliance | mL/kPa | mL/cmH₂O | C[mL/kPa] = C[mL/cmH₂O] × 10.197 |
+| Resistance | kPa/L/s | cmH₂O/L/s | R[kPa/L/s] = R[cmH₂O/L/s] / 10.197 |
 
-```python
-def convert_compliance_to_kPa(C_cmH2O):
-    """Convert mL/cmH₂O to mL/kPa"""
-    return C_cmH2O * 10.2
+**Conversion factor:** 1 kPa = 10.197 cmH₂O
 
-def convert_resistance_to_kPa(R_cmH2O):
-    """Convert cmH₂O/L/s to kPa/L/s"""
-    return R_cmH2O / 10.2
-```
+### 3.8 Hardware Requirements Summary
+
+**No additional hardware needed** — existing sensors are sufficient:
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Flow sensor | ✅ MFM available | SI-traceable, real-time logging |
+| Pressure sensor | ✅ DPS available | Appropriate range for ventilation |
+| Volume actuator | ✅ Syringe available | Calibrated with 100 mL syringe |
+| Data acquisition | ✅ STM32F405 | Synchronized logging |
+
+**Software required:**
+- Extend data logging to include both MFM (flow) and DPS (pressure)
+- Implement compliance/resistance calculation
+- Unit conversion functions
+- Visualization (P-V loops, flow-volume curves)
 
 ---
 
