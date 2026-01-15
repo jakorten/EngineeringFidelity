@@ -10,14 +10,14 @@
 
 | Priority | Total | Verified | Needs Evidence | Coverage |
 |----------|-------|----------|----------------|----------|
-| P0 | 13 | 9 | 4 | 69% |
+| P0 | 15 | 11 | 4 | 73% |
 | P1 | 7 | 1 | 6 | 14% |
 | P2 | 1 | 0 | 1 | 0% |
-| **Total** | **21** | **10** | **11** | **48%** |
+| **Total** | **23** | **12** | **11** | **52%** |
 
 **Target:** >=85% overall, 100% P0
 
-**Last verification:** I2, I3, D1, D2 (2026-01-15) — Novelty claims verified via literature search
+**Last verification:** C7, V3 added (2026-01-15) — Infant compression/ventilation claims verified via web + PDF
 
 ---
 
@@ -48,6 +48,7 @@
 |----|-------|----------|--------|--------|
 | C5 | Infant chest mechanical properties are largely uncharacterized | P0 | Literature gap | [x] VERIFIED: Babic 2017 "Little research has been performed to evaluate the force required in younger infants" — authors used scaled adult data |
 | C6 | Infant compliance differs from adults | P1 | Papastamelos 1995 | [ ] |
+| C7 | Infant compression depth targets are age-dependent (2.7-4.0cm) | P0 | Japan 2024, AHA 2025 | [x] VERIFIED: 0mo=2.7cm, 2mo=2.9cm, 12-23mo=3.6cm (n=555); 49% would be over-compressed using 4cm |
 
 ### Section 2: Human Reference Model -- Ventilation Mechanics
 
@@ -55,6 +56,7 @@
 |----|-------|----------|--------|--------|
 | V1 | Infant compliance ~78 mL/kPa (1-24 wks) to ~171 mL/kPa (73-96 wks) | P0 | Huang 2016 | [x] VERIFIED: Table 2, n=205, 77.95±46.16 to 170.58±50.14 mL/kPa |
 | V2 | Infant resistance ~6.4 kPa/L/s (1-24 wks) to ~3.7 kPa/L/s (73-96 wks) | P0 | Huang 2016 | [x] VERIFIED: Table 2, n=205, median 6.39 to 3.74 kPa/L/s |
+| V3 | Infant chest wall 3× more compliant than lungs (Ccw/CL ≈ 3:1) | P0 | Stoecklin 2024, Diedericks 2025 | [x] VERIFIED: Ccw/kg 3.0 vs CL/kg 0.95 mL/cmH₂O/kg (n=23); normalizes by 1 year |
 
 ### Section 3: Uncertainty Envelope
 
@@ -144,6 +146,10 @@ Nice to have:
 | Babic 2017 | C5 | Infant data gap -- "Little research has been performed..." | [x] VERIFIED |
 | Thielen 2017 | C5 | Anatomical approach, no human validation | [x] VERIFIED |
 | Morin 2024 | -- | Adult ventilation reference: compliance 37-40 mL/cmH₂O, resistance 20 cmH₂O·s/L | [x] NEW: SAM manikin validation paper |
+| Neurauter 2009 | C1 | Stiffness 7.7-8.1 N/mm at 50mm depth (n=30 patients) | [x] VERIFIED: Supports C1 range |
+| Stoecklin 2024 | V3 | Preterm Crs/kg 0.69, CL/kg 0.95, Ccw/kg 3.0 mL/cmH₂O/kg; Ccw≈3×CL | [x] VERIFIED via PDF |
+| Japan CC 2024 | C7 | Infant compression targets: 0mo=2.7cm, 2mo=2.9cm (n=555) | [x] VERIFIED via web |
+| 2025 AHA | C7 | Two-finger technique eliminated; ~4cm infant depth | [x] VERIFIED via web |
 
 ### Own Data (verify data files exist and analysis correct)
 
@@ -166,6 +172,6 @@ Nice to have:
 ---
 
 *Registry created: 2026-01-15*
-*Last update: 2026-01-15 — All verifiable literature claims verified (10/21 claims, 48%)*
+*Last update: 2026-01-15 — Tier 1 PDFs verified + new infant claims added (12/23 claims, 52%)*
 *Remaining P0: M1, M2 (own work), RC1-RC2, RV1-RV3 (own data - pending experiments)*
 *Update after each verification pass*

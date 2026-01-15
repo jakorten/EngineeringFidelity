@@ -119,30 +119,31 @@ Much of the literature search was already done for the Proposition paper. Key da
 - [x] Check if already in Proposition/articles/pdfs/ (Yes - copied over)
 
 ### Step 2: Verify Extracted Values
-- [ ] Confirm Lim 2024 stiffness 4-10 N/mm (Table 2?)
-- [ ] Confirm Tomlinson 2007 non-linearity quote
-- [ ] Confirm Ruiz de Gauna 2023 -34.6% change
-- [ ] Confirm Huang 2016 compliance/resistance values
+- [x] Confirm Lim 2024 stiffness 4-10 N/mm — **VERIFIED**: Human ref 4-10 N/mm (from Nysæther via [16])
+- [x] Confirm Tomlinson 2007 non-linearity quote — **VERIFIED**: "strong non-linear relationship", progressivity 1.41±0.25
+- [x] Confirm Ruiz de Gauna 2023 -34.6% change — **VERIFIED**: 34.6% (95% CI 33.0-36.1)
+- [x] Confirm Huang 2016 compliance/resistance values — **VERIFIED** (earlier)
+- [x] Confirm Neurauter 2009 stiffness 7.7-8.1 N/mm — **VERIFIED** at 50mm depth (n=30)
 
 ### Step 3: Extract Additional Data
-- [ ] Uncertainty/variability for all values
-- [ ] Measurement methods used
-- [ ] Patient/subject demographics
-- [ ] Any manikin comparison data
+- [x] Uncertainty/variability for all values — SD/CI captured in claim registry
+- [x] Measurement methods used — documented in extraction files
+- [x] Patient/subject demographics — n sizes recorded
+- [ ] Any manikin comparison data — gap confirmed (MST paper contribution)
 
 ---
 
 ## Key Quotes (From Proposition - To Verify)
 
-### Tomlinson et al. 2007
+### Tomlinson et al. 2007 — **VERIFIED**
 > "Commonly used CPR training manikins...usually have spring loaded chests with a **linear relationship between force and depth**."
 
-**Verify:** Page number, exact wording
+**Status:** [x] VERIFIED — Discussion section (p.326)
 
-### Lim et al. 2024
+### Lim et al. 2024 — **VERIFIED**
 > "Mechanical properties of commercially available CPR training manikins remain constant and **no information on these properties is provided by the manufacturers**."
 
-**Verify:** Page number, exact wording
+**Status:** [x] VERIFIED — Introduction section (p.2)
 
 ---
 

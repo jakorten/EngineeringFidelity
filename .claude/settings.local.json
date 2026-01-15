@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:ebrary.net)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(curl:*)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)"
     ]
   }
 }
