@@ -1,7 +1,7 @@
 # Claim Registry
 
 **Paper:** Engineering Fidelity of CPR Training Manikins (MST Special Issue)
-**Last Updated:** 2026-01-15
+**Last Updated:** 2026-01-15 (C5 verified)
 **Thesis:** Data-driven reference model enables objective manikin evaluation and quantification of the engineering fidelity gap
 
 ---
@@ -10,12 +10,14 @@
 
 | Priority | Total | Verified | Needs Evidence | Coverage |
 |----------|-------|----------|----------------|----------|
-| P0 | 0 | 0 | 0 | 0% |
-| P1 | 0 | 0 | 0 | 0% |
-| P2 | 0 | 0 | 0 | 0% |
-| **Total** | **0** | **0** | **0** | **0%** |
+| P0 | 13 | 1 | 12 | 8% |
+| P1 | 7 | 0 | 7 | 0% |
+| P2 | 1 | 0 | 1 | 0% |
+| **Total** | **21** | **1** | **20** | **5%** |
 
 **Target:** >=85% overall, 100% P0
+
+**Last verification:** C5 (2026-01-15) — Infant compression gap confirmed via Babic 2017
 
 ---
 
@@ -44,7 +46,7 @@
 
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
-| C5 | Infant chest mechanical properties are largely uncharacterized | P0 | Literature gap | [ ] |
+| C5 | Infant chest mechanical properties are largely uncharacterized | P0 | Literature gap | [x] VERIFIED: Babic 2017 "Little research has been performed to evaluate the force required in younger infants" — authors used scaled adult data |
 | C6 | Infant compliance differs from adults | P1 | Papastamelos 1995 | [ ] |
 
 ### Section 2: Human Reference Model -- Ventilation Mechanics
@@ -132,12 +134,14 @@ Nice to have:
 
 ### Literature Sources (verify exact values)
 
-| Source | Claims | What to Check |
-|--------|--------|---------------|
-| Lim 2024 | C1, C2 | Stiffness 5.3-13.6, damping 0.13-0.51 -- exact numbers from Table 2 |
-| Tomlinson 2007 | C3 | Non-linear force-displacement -- verify description |
-| Ruiz de Gauna 2023 | C4 | 35% decrease -- exact value and conditions |
-| Huang 2016 | V1, V2 | Compliance and resistance ranges -- exact values |
+| Source | Claims | What to Check | Status |
+|--------|--------|---------------|--------|
+| Lim 2024 | C1, C2 | Stiffness 5.3-13.6, damping 0.13-0.51 -- exact numbers from Table 2 | [ ] |
+| Tomlinson 2007 | C3 | Non-linear force-displacement -- verify description | [ ] |
+| Ruiz de Gauna 2023 | C4 | 35% decrease -- exact value and conditions | [ ] |
+| Huang 2016 | V1, V2 | Compliance and resistance ranges -- exact values | [ ] |
+| Babic 2017 | C5 | Infant data gap -- "Little research has been performed..." | [x] VERIFIED |
+| Thielen 2017 | C5 | Anatomical approach, no human validation -- "considerably lower" stiffness | [x] VERIFIED |
 
 ### Own Data (verify data files exist and analysis correct)
 
@@ -160,4 +164,5 @@ Nice to have:
 ---
 
 *Registry created: 2026-01-15*
+*Last update: 2026-01-15 — C5 verified (Babic 2017, Thielen 2017)*
 *Update after each verification pass*
