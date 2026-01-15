@@ -51,6 +51,27 @@ Much of the literature search was already done for the Proposition paper. Key da
 | **Athanasiades et al. 2000** | Nonlinear lung model | [x] | Energy analysis approach |
 | **Babic et al. 2017** | Infant CPR manikin test protocol | [x] URL | Universal Testing Machine protocol |
 
+### Tier 3: Recent Papers (2022-2025) - TO OBTAIN
+
+**See:** `recent_papers_to_obtain.md` for DOIs and download links
+
+#### Neonatal Respiratory Mechanics
+
+| Paper | Year | Key Data | PDF | Priority |
+|-------|------|----------|-----|----------|
+| **Stoecklin et al.** | 2024 | First postsurfactant Crs, CL, Ccw in preterm ± BPD | [ ] | **HIGH** |
+| **Reiss et al.** | 2024 | No compliance deterioration in preterm on CMV | [ ] | Medium |
+| **Diedericks et al.** | 2025 | Chest wall role at birth (review) | [ ] | Medium |
+
+#### Neonatal Chest Compression / CPR
+
+| Paper | Year | Key Data | PDF | Priority |
+|-------|------|----------|-----|----------|
+| **Japan CC depth** | 2024 | Target depth 0mo=2.7cm, 2mo=2.9cm (shallower than guidelines!) | [ ] | **HIGH** |
+| **SURV1VE Trial** | 2024 | Sustained inflation + CC vs 3:1 ratio in newborns | [ ] | Medium |
+| **Novel CC technique** | 2025 | 92.4% adequate rate with novel technique | [ ] | Low |
+| **2025 AHA Guidelines** | 2025 | Latest neonatal resuscitation guidelines | [ ] | **HIGH** |
+
 ---
 
 ## Reference Values (From Proposition)
