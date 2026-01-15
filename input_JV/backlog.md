@@ -131,7 +131,8 @@
 
 ## Next Session Priorities
 
-1. Order MPXV5010DP pressure sensor (~€10)
+1. **Discuss with Bronkhorst** re: EL-PRESS P-506C (0-100 mbar) for traceable airway pressure
+   - Alternative: MPXV5010DP (~€10) + water column reference
 2. Load cell firmware integration
 3. Decision on reference model scope (DR-001)
 4. Manikin availability assessment
