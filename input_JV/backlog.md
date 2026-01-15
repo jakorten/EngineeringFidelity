@@ -15,6 +15,8 @@
 - [ ] Populate claim registry with initial claims from outline
 
 ### Human Reference Model (Literature)
+- [x] Extract existing data from Proposition repo
+- [ ] Obtain PDFs: Lim 2024, Tomlinson 2007, Ruiz de Gauna 2023, Huang 2016
 - [ ] Verify Lim 2024 stiffness/damping values (Claims C1, C2)
 - [ ] Verify Tomlinson 2007 non-linearity description (Claim C3)
 - [ ] Verify Ruiz de Gauna 2023 dynamic softening (Claim C4)
@@ -96,6 +98,12 @@
   - `MST_Review_Prompt_Stage1.md` - gate decision (proceed/reject)
   - `MST_Review_Prompt_Stage2.md` - detailed section-by-section review
   - `USAGE_GUIDE.md` - how to use the review prompts
+- [x] Set up literature folder structure (`input_JV/literature/`)
+- [x] Extracted human reference data from Proposition repo:
+  - Adult compression: Lim 2024, Tomlinson 2007, Ruiz de Gauna 2023, Neurauter 2009
+  - Infant ventilation: Huang 2016
+  - Key quotes and evidence gaps identified
+  - See `extracted_data_from_proposition.md`
 
 ---
 
