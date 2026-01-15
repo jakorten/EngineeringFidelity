@@ -64,24 +64,27 @@
 
 ## Delayed Decisions
 
-### DR-001: Reference Model Scope (PENDING)
-**Decision needed:** How comprehensive should the human reference model be?
+### DR-001: Reference Model Scope (DECIDED)
+**Decision:** Infant ventilation focus
 
-**Options:**
-- Option A: Adults + infants, compressions + ventilations (full scope from outline)
-- Option B: Focus on infants only (where we have more unique data)
-- Option C: Focus on ventilations only (biggest evidence gap)
+**Rationale:**
+- Only infant manikins available
+- Test equipment suitable for infant manikins only
+- Human reference exists for infant ventilation (Huang 2016, n=205)
+- No human reference exists for infant compression (cannot validate)
+- Strongest novelty: no prior infant manikin ventilation benchmark
 
-**Blocked by:**
-- [ ] Assessment of available human reference data
-- [ ] Assessment of available manikins for testing
-- [ ] Discussion with co-authors
+**Implications:**
+- Compression claims moved out of scope
+- Load cell integration no longer priority
+- Focus on airway pressure sensor (Bronkhorst discussion)
+
+See: `DR-001_reference_model_scope.md`
 
 ### DR-002: Manikin Selection (PENDING)
-**Decision needed:** Which manikins to characterize?
+**Decision needed:** Which infant manikins to characterize?
 
-**Options:**
-- TBD after resource assessment
+**Action:** Inventory available infant manikins
 
 ---
 
@@ -133,6 +136,6 @@
 
 1. **Discuss with Bronkhorst** re: EL-PRESS P-506C (0-100 mbar) for traceable airway pressure
    - Alternative: MPXV5010DP (~€10) + water column reference
-2. Load cell firmware integration
-3. Decision on reference model scope (DR-001)
-4. Manikin availability assessment
+2. **Inventory infant manikins** (DR-002)
+3. ~~Load cell firmware integration~~ — deprioritized per DR-001 (ventilation focus)
+4. ~~Decision on reference model scope (DR-001)~~ — **DECIDED: infant ventilation**
