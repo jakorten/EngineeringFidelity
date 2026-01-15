@@ -135,7 +135,9 @@ See: `DR-001_reference_model_scope.md`
 ## Next Session Priorities
 
 1. **Discuss with Bronkhorst** re: EL-PRESS P-506C (0-100 mbar) for traceable airway pressure
-   - Alternative: MPXV5010DP (~€10) + water column reference
+   - Alternative: **MPXV5010GP available** — pin-compatible replacement for MPXV5050
+   - MPXV5010GP: 0-10 kPa, ±0.25 kPa accuracy (5× better than MPXV5050)
+   - Still need calibration reference (water column or traceable manometer)
 2. **Inventory infant manikins** (DR-002)
 3. ~~Load cell firmware integration~~ — deprioritized per DR-001 (ventilation focus)
 4. ~~Decision on reference model scope (DR-001)~~ — **DECIDED: infant ventilation**
