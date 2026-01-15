@@ -10,14 +10,14 @@
 
 | Priority | Total | Verified | Needs Evidence | Coverage |
 |----------|-------|----------|----------------|----------|
-| P0 | 13 | 1 | 12 | 8% |
-| P1 | 7 | 0 | 7 | 0% |
+| P0 | 13 | 5 | 8 | 38% |
+| P1 | 7 | 1 | 6 | 14% |
 | P2 | 1 | 0 | 1 | 0% |
-| **Total** | **21** | **1** | **20** | **5%** |
+| **Total** | **21** | **6** | **15** | **29%** |
 
 **Target:** >=85% overall, 100% P0
 
-**Last verification:** C5 (2026-01-15) — Infant compression gap confirmed via Babic 2017
+**Last verification:** C1-C4, V1-V2 (2026-01-15) — All literature claims verified
 
 ---
 
@@ -37,10 +37,10 @@
 
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
-| C1 | Adult chest stiffness ranges 5.3-13.6 N/mm at 50mm depth | P0 | Lim 2024 | [ ] |
-| C2 | Adult chest damping ranges 0.13-0.51 N*s/mm | P0 | Lim 2024 | [ ] |
-| C3 | Force-displacement relationship is non-linear (human) | P0 | Tomlinson 2007 | [ ] |
-| C4 | Chest stiffness decreases ~35% after 3000 compressions | P1 | Ruiz de Gauna 2023 | [ ] |
+| C1 | Adult chest stiffness ~3-11 N/mm (human), 5.3-13.6 N/mm (manikin range) | P0 | Nysæther 2008 (human), Lim 2024 (manikin) | [x] VERIFIED: Nysæther n=59: mean 270±150 N at 38mm → ~7 N/mm avg. Lim manikin: 5.34-13.59 N/mm |
+| C2 | Adult chest damping ~0.17 N·s/mm (human), 0.13-0.51 N·s/mm (manikin range) | P0 | Nysæther 2008 (human), Lim 2024 (manikin) | [x] VERIFIED: Nysæther n=59: 169±60 N·s/m. Lim manikin: 0.127-0.511 N·s/mm |
+| C3 | Force-displacement relationship is non-linear (human) | P0 | Tomlinson 2007 | [x] VERIFIED: "strong non-linear relationship" (n=91), progressivity factor 1.41±0.25 |
+| C4 | Chest stiffness decreases ~35% after 3000 compressions | P1 | Ruiz de Gauna 2023 | [x] VERIFIED: 34.6% decrease (95% CI 33.0-36.1), n=615, 1.15M compressions |
 
 #### 2.2 Infants/Pediatrics
 
@@ -53,8 +53,8 @@
 
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
-| V1 | Infant compliance ~80 mL/kPa (1-24 wks) to ~170 mL/kPa (73-96 wks) | P0 | Huang 2016 | [ ] |
-| V2 | Infant resistance ~6 kPa/L/s (1-24 wks) to ~4 kPa/L/s (73-96 wks) | P0 | Huang 2016 | [ ] |
+| V1 | Infant compliance ~78 mL/kPa (1-24 wks) to ~171 mL/kPa (73-96 wks) | P0 | Huang 2016 | [x] VERIFIED: Table 2, n=205, 77.95±46.16 to 170.58±50.14 mL/kPa |
+| V2 | Infant resistance ~6.4 kPa/L/s (1-24 wks) to ~3.7 kPa/L/s (73-96 wks) | P0 | Huang 2016 | [x] VERIFIED: Table 2, n=205, median 6.39 to 3.74 kPa/L/s |
 
 ### Section 3: Uncertainty Envelope
 
@@ -136,12 +136,14 @@ Nice to have:
 
 | Source | Claims | What to Check | Status |
 |--------|--------|---------------|--------|
-| Lim 2024 | C1, C2 | Stiffness 5.3-13.6, damping 0.13-0.51 -- exact numbers from Table 2 | [ ] |
-| Tomlinson 2007 | C3 | Non-linear force-displacement -- verify description | [ ] |
-| Ruiz de Gauna 2023 | C4 | 35% decrease -- exact value and conditions | [ ] |
-| Huang 2016 | V1, V2 | Compliance and resistance ranges -- exact values | [ ] |
+| Nysæther 2008 | C1, C2 | Human chest stiffness/damping (n=59 OHCA patients) | [x] VERIFIED: Primary source for human values |
+| Lim 2024 | C1, C2 | Manikin system range 5.34-13.59 N/mm, 0.127-0.511 N·s/mm | [x] VERIFIED: Manikin design, cites Nysæther for human ref |
+| Tomlinson 2007 | C3 | Non-linear force-displacement (n=91) | [x] VERIFIED: Progressivity factor 1.41±0.25 |
+| Ruiz de Gauna 2023 | C4 | 34.6% stiffness decrease (n=615, 1.15M compressions) | [x] VERIFIED |
+| Huang 2016 | V1, V2 | Infant compliance 78-171 mL/kPa, resistance 3.7-6.4 kPa/L/s (n=205) | [x] VERIFIED |
 | Babic 2017 | C5 | Infant data gap -- "Little research has been performed..." | [x] VERIFIED |
-| Thielen 2017 | C5 | Anatomical approach, no human validation -- "considerably lower" stiffness | [x] VERIFIED |
+| Thielen 2017 | C5 | Anatomical approach, no human validation | [x] VERIFIED |
+| Morin 2024 | -- | Adult ventilation reference: compliance 37-40 mL/cmH₂O, resistance 20 cmH₂O·s/L | [x] NEW: SAM manikin validation paper |
 
 ### Own Data (verify data files exist and analysis correct)
 
@@ -164,5 +166,5 @@ Nice to have:
 ---
 
 *Registry created: 2026-01-15*
-*Last update: 2026-01-15 — C5 verified (Babic 2017, Thielen 2017)*
+*Last update: 2026-01-15 — C1-C4, C5, V1-V2 verified (6/21 claims, 29%)*
 *Update after each verification pass*
