@@ -82,14 +82,27 @@
 
 ## Out of Scope (per DR-001)
 
-The following claims were in the original registry but are excluded due to infant ventilation focus:
+The following claims were verified but excluded due to infant ventilation focus. Preserved here for future reference:
 
-| ID | Original Claim | Reason Excluded |
-|----|----------------|-----------------|
-| C1-C4 | Adult compression mechanics | Adult manikins not available |
-| C5-C7 | Infant compression mechanics | No human reference data exists |
-| RC1-RC2 | Compression results | Compression excluded from scope |
-| EF1 (compression) | Compression fidelity formula | Compression excluded from scope |
+### Compression Claims (Verified but Excluded)
+
+| ID | Claim | Source | Verification |
+|----|-------|--------|--------------|
+| C1 | Adult chest stiffness 3-11 N/mm | Nysæther 2008 (n=59) | [x] Mean 270±150 N at 38mm → ~7 N/mm avg |
+| C2 | Adult chest damping ~0.17 N·s/mm | Nysæther 2008 (n=59) | [x] 169±60 N·s/m |
+| C3 | Force-displacement is non-linear | Tomlinson 2007 (n=91) | [x] Progressivity factor 1.41±0.25 |
+| C4 | Stiffness decreases ~35% after 3000 compressions | Ruiz de Gauna 2023 (n=615) | [x] 34.6% (95% CI 33.0-36.1) |
+| C5 | Infant chest properties uncharacterized | Babic 2017 | [x] "Little research performed..." |
+| C7 | Infant compression depth age-dependent | Ikeyama 2024 (n=555) | [x] 0-2mo: 2.7cm, 49% over-compressed at 4cm |
+
+**Reason excluded:** Only infant manikins available; no human reference for infant compression validation.
+
+### Source Locations (for reference)
+
+| Source | File |
+|--------|------|
+| Nysæther 2008 | `/research/articles/md_out/Manikins_With_Human_Like_Chest_Propertie.md` |
+| Ikeyama 2024 | `/research/articles/md_out/Chest Compression Depth Targets...Japan, 2019–2022.md` |
 
 ---
 
@@ -152,5 +165,6 @@ Nice to have:
 
 *Registry created: 2026-01-15*
 *Scope change: 2026-01-15 — Infant ventilation focus (DR-001)*
+*Last update: 2026-01-15 — Added compression claim details to out-of-scope section*
 *Current: 6/13 claims verified (46%), 5/8 P0 verified (63%)*
 *Remaining P0: M1, M2 (own work), RV1-RV3 (own data - pending experiments)*
