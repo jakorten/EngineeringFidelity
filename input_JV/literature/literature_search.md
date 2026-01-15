@@ -30,7 +30,7 @@ Much of the literature search was already done for the Proposition paper. Key da
 | Paper | Key Data | Proposition | PDF | Verified |
 |-------|----------|-------------|-----|----------|
 | **Papastamelos et al. 1995** | Developmental chest wall compliance | [ ] | [ ] | [ ] |
-| **Babic et al. 2017** | Infant CPR manikin test protocol | [ ] | [ ] | [ ] |
+| **Babic et al. 2017** | Infant CPR manikin test protocol | [ ] | [x] URL | [ ] |
 | **Thielen et al. 2017** | Human-like thorax design | [x] Referenced | [ ] | [ ] |
 
 #### Ventilation Mechanics - Infants
@@ -41,6 +41,15 @@ Much of the literature search was already done for the Proposition paper. Key da
 | **Battisti et al. 2012** | Compliance 1.37-1.67 mL/cm H₂O/s, Resistance 0.048-0.060 | [x] Extracted | [x] | [x] Web |
 
 **NEW:** Detailed extraction in `md_out/infant_respiratory_reference_values.md`
+
+### Tier 2: Methodology/Modeling Papers
+
+| Paper | Key Data | PDF | Notes |
+|-------|----------|-----|-------|
+| **Le Rolle et al. 2008** | Newborn lamb vs adult respiratory parameters | [x] | Lamb Cl=0.009, Ccw=0.013 L/cmH₂O |
+| **Fresnel et al. 2014** | Pmus model for mechanical lung testing | [x] | Methodology for ventilator bench testing |
+| **Athanasiades et al. 2000** | Nonlinear lung model | [x] | Energy analysis approach |
+| **Babic et al. 2017** | Infant CPR manikin test protocol | [x] URL | Universal Testing Machine protocol |
 
 ---
 
