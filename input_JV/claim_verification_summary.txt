@@ -1,11 +1,11 @@
 CLAIM VERIFICATION SUMMARY
 MST Paper: Engineering Fidelity of CPR Training Manikins
 Date: 2026-01-15
-Scope: Infants only (compressions + ventilations)
+Scope: Infant VENTILATION only (compression out of scope - no human stiffness/damping data)
 
 ==============================================================================
-COVERAGE: 12/23 claims verified (52%)
-P0 Critical: 11/15 verified (73%) - Remaining P0 blocked by own experiments
+COVERAGE: 9/12 in-scope claims verified (75%)
+P0 Critical: 6/7 verified (86%) - Remaining P0 blocked by own experiments
 ==============================================================================
 
 SECTION 1: INTRODUCTION
@@ -14,42 +14,12 @@ SECTION 1: INTRODUCTION
     Source: Literature gap confirmed. Only Baubin 1995 (30y old). Recent work
     (Lim 2024, Morin 2024) develops single manikins, not benchmarks.
 
-[x] I3: First combined compression + ventilation reference model
-    Source: No competing combined model found in literature.
+[x] I3: First infant ventilation reference model for manikin benchmarking
+    Source: No competing infant ventilation manikin benchmark found.
 
 
-SECTION 2: HUMAN REFERENCE MODEL - COMPRESSION
-----------------------------------------------
-[x] C1: Adult chest stiffness 4-10 N/mm (human)
-    Source: Nysaether 2008 (n=59 OHCA patients)
-    Values: Mean 270 +/- 150 N at 38mm -> ~7 N/mm average
-
-[x] C2: Adult chest damping ~0.17 N*s/mm (human)
-    Source: Nysaether 2008 (n=59)
-    Values: 169 +/- 60 N*s/m
-
-[x] C3: Force-displacement is non-linear
-    Source: Tomlinson 2007 (n=91)
-    Values: Progressivity factor 1.41 +/- 0.25
-
-[x] C4: Stiffness decreases ~35% after 3000 compressions (P1)
-    Source: Ruiz de Gauna 2023 (n=615, 1.15M compressions)
-    Values: 34.6% decrease (95% CI 33.0-36.1)
-
-[x] C5: Infant chest properties largely uncharacterized
-    Source: Babic 2017 - "Little research has been performed to evaluate
-    the force required in younger infants"
-
-[x] C7: Infant compression depth targets are age-dependent
-    Source: Japan 2024 (n=555 critically ill patients <8 years)
-    Values: 0 months: 2.7 cm (2.5-2.9)
-            2 months: 2.9 cm (2.7-3.2)
-            12-23 months: 3.6 cm (3.4-4.0)
-    Note: 49% of infants 0-2mo would be over-compressed using 4cm guideline
-
-
-SECTION 2: HUMAN REFERENCE MODEL - VENTILATION
-----------------------------------------------
+SECTION 2: HUMAN REFERENCE MODEL - VENTILATION (IN SCOPE)
+---------------------------------------------------------
 [x] V1: Infant compliance ~78-171 mL/kPa (age-dependent)
     Source: Huang 2016 (n=205 infants, 1-96 weeks)
     Values: 1-24 wks: 77.95 +/- 46.16 mL/kPa
@@ -68,7 +38,7 @@ SECTION 2: HUMAN REFERENCE MODEL - VENTILATION
 
 SECTION 7: DISCUSSION
 ---------------------
-[x] D1: First systematic multi-manikin benchmark
+[x] D1: First systematic multi-manikin ventilation benchmark
     Source: Literature gap confirmed - no multi-manikin benchmark against
     human reference values exists
 
@@ -77,46 +47,57 @@ SECTION 7: DISCUSSION
 
 
 ==============================================================================
+COMPRESSION - OUT OF SCOPE (verified but not benchmarkable)
+==============================================================================
+Why out of scope: No human stiffness/damping data exists for infants.
+We have depth targets but cannot benchmark force-displacement behavior.
+
+[x] C5: Infant chest properties largely uncharacterized
+    Source: Babic 2017 - "Little research has been performed to evaluate
+    the force required in younger infants"
+    -> This GAP is why compression is out of scope
+
+[x] C7: Infant compression depth targets exist (Japan 2024)
+    Values: 0mo: 2.7cm, 2mo: 2.9cm, 12-23mo: 3.6cm
+    Note: Depth only - no force/stiffness data to benchmark against
+
+
+==============================================================================
 CLAIMS BLOCKED BY OWN WORK (experiments pending)
 ==============================================================================
 [ ] M1: Protocol based on IEEE TIM methodology
 [ ] M2: Multiple manufacturers tested
-[ ] RC1-RC2: Manikin compression values and deviation
-[ ] RV1-RV3: Manikin ventilation values and deviation
+[ ] RV1-RV3: Manikin ventilation values and deviation from human reference
 
 
 ==============================================================================
 SOURCE VERIFICATION SUMMARY
 ==============================================================================
-PRIMARY SOURCES (human reference data):
-- Nysaether 2008: n=59, IEEE Trans Biomed Eng - VERIFIED via PubMed
+PRIMARY SOURCES (infant ventilation - IN SCOPE):
 - Huang 2016: n=205, PMC4805831 - VERIFIED via direct PDF
-- Tomlinson 2007: n=91, Resuscitation - VERIFIED via PDF
-- Ruiz de Gauna 2023: n=615 - VERIFIED via PDF
 - Stoecklin 2024: n=23, J Appl Physiol - VERIFIED via PDF
 - Diedericks 2025: FASEB J review - VERIFIED via PDF
-- Japan CC 2024: n=555, Pediatr Crit Care Med - VERIFIED via web
+- Reiss 2024: n=56 preterm, PMC11748114 - VERIFIED via PDF
 
 PDFS OBTAINED LOCALLY:
 - stoecklin_2024_preterm_mechanics.pdf
 - reiss_2024_preterm_compliance.pdf
 - diedericks_2025_chest_wall.pdf
-- survive_2024_cc_si.pdf
-- novel_cc_2025.pdf
-- Plus: lim_2024, tomlinson_2007, ruiz_de_gauna_2023, neurauter_2009,
-  huang_2016, battisti_2012
+- huang_2016 (from Proposition repo)
 
-STILL NEEDED (institutional access):
-- Nysaether 2008 PDF (IEEE)
-- Japan CC 2024 PDF (Pediatr Crit Care Med)
+CONTEXT SOURCES (compression - out of scope):
+- Japan CC 2024: n=555 - depth targets only, no stiffness
+- Babic 2017: confirms evidence gap
 
 
 ==============================================================================
 NOTES
 ==============================================================================
+- DR-001 DECIDED: Infant ventilation ONLY
+  Rationale: No human stiffness/damping data for infant compression
+  -> Cannot benchmark manikin compression without reference values
 - All infant ventilation claims (V1-V3) directly verified from source PDFs
-- All infant compression claims verified via web or PDF
-- DR-001 DECIDED: Infants only (no adult manikins available)
 - No hallucinations detected in verified claims
+- Next: Bronkhorst discussion re airway pressure sensor
 
 Generated by Claude for JV email summary
