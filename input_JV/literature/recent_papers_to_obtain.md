@@ -182,4 +182,21 @@ Most of these papers require institutional access or ResearchGate request.
 
 ---
 
+## PDFs Needing Manual Download
+
+Bot protection blocks automated downloads. Please download manually:
+
+| Paper | Direct Link | Save As |
+|-------|-------------|---------|
+| Reiss 2024 | [PMC11748114](https://pmc.ncbi.nlm.nih.gov/articles/PMC11748114/pdf/) | `reiss_2024_preterm_compliance.pdf` |
+| Diedericks 2025 | [PMC12464809](https://pmc.ncbi.nlm.nih.gov/articles/PMC12464809/pdf/) | `diedericks_2025_chest_wall.pdf` |
+| SURV1VE 2024 | [PMC11228189](https://pmc.ncbi.nlm.nih.gov/articles/PMC11228189/pdf/) | `survive_2024_cc_si.pdf` |
+| Novel CC 2025 | [MDPI](https://www.mdpi.com/2227-9067/12/3/346/pdf) | `novel_cc_2025.pdf` |
+| Nysæther 2008 | [IEEE](https://ieeexplore.ieee.org/document/4657170) | `nysaether_2008_chest_properties.pdf` |
+| Japan CC 2024 | [DOI](https://doi.org/10.1097/PCC.0000000000003509) | `japan_2024_compression_depth.pdf` |
+
+**Save to:** `input_JV/literature/pdfs/`
+
+---
+
 *Created: 2026-01-15*
