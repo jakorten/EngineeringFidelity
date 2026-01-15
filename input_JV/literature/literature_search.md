@@ -20,10 +20,10 @@ Much of the literature search was already done for the Proposition paper. Key da
 
 | Paper | Key Data | Proposition | PDF | Verified |
 |-------|----------|-------------|-----|----------|
-| **Lim et al. 2024** | Stiffness 4-10 N/mm, damping 0.08-0.38 N·s/mm | [x] Extracted | [ ] | [ ] |
-| **Tomlinson et al. 2007** | Non-linear force-depth, F38 = 27.5±13.6 kg | [x] Extracted | [ ] | [ ] |
-| **Ruiz de Gauna et al. 2023** | Dynamic stiffness -34.6% during CPR | [x] Extracted | [ ] | [ ] |
-| **Neurauter et al. 2009** | Stiffness 7.7-8.1 N/mm at 50mm | [x] Extracted | [ ] | [ ] |
+| **Lim et al. 2024** | Stiffness 4-10 N/mm, damping 0.08-0.38 N·s/mm | [x] Extracted | [x] | [ ] |
+| **Tomlinson et al. 2007** | Non-linear force-depth, F38 = 27.5±13.6 kg | [x] Extracted | [x] | [ ] |
+| **Ruiz de Gauna et al. 2023** | Dynamic stiffness -34.6% during CPR | [x] Extracted | [x] | [ ] |
+| **Neurauter et al. 2009** | Stiffness 7.7-8.1 N/mm at 50mm | [x] Extracted | [x] | [ ] |
 
 #### Compression Mechanics - Infants/Pediatrics
 
@@ -37,8 +37,8 @@ Much of the literature search was already done for the Proposition paper. Key da
 
 | Paper | Key Data | Proposition | PDF | Verified |
 |-------|----------|-------------|-----|----------|
-| **Huang et al. 2016** | Compliance 119.52±60.47 mL/kPa, Resistance 5.04 kPa/L/s | [x] Extracted | [ ] | [x] Web |
-| **Battisti et al. 2012** | Compliance 1.37-1.67 mL/cm H₂O/s, Resistance 0.048-0.060 | [x] Extracted | [ ] | [x] Web |
+| **Huang et al. 2016** | Compliance 119.52±60.47 mL/kPa, Resistance 5.04 kPa/L/s | [x] Extracted | [x] | [x] Web |
+| **Battisti et al. 2012** | Compliance 1.37-1.67 mL/cm H₂O/s, Resistance 0.048-0.060 | [x] Extracted | [x] | [x] Web |
 
 **NEW:** Detailed extraction in `md_out/infant_respiratory_reference_values.md`
 
@@ -82,9 +82,9 @@ Much of the literature search was already done for the Proposition paper. Key da
 ## Verification Tasks
 
 ### Step 1: Obtain PDFs
-- [ ] Download/locate Lim 2024, Tomlinson 2007, Ruiz de Gauna 2023
-- [ ] Download/locate Huang 2016, Battisti 2012
-- [ ] Check if already in Proposition/articles/pdfs/
+- [x] Download/locate Lim 2024, Tomlinson 2007, Ruiz de Gauna 2023 (from Proposition)
+- [x] Download/locate Huang 2016, Battisti 2012 (open access downloads)
+- [x] Check if already in Proposition/articles/pdfs/ (Yes - copied over)
 
 ### Step 2: Verify Extracted Values
 - [ ] Confirm Lim 2024 stiffness 4-10 N/mm (Table 2?)

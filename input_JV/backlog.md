@@ -16,7 +16,8 @@
 
 ### Human Reference Model (Literature)
 - [x] Extract existing data from Proposition repo
-- [ ] Obtain PDFs: Lim 2024, Tomlinson 2007, Ruiz de Gauna 2023, Huang 2016
+- [x] Obtain PDFs: Lim 2024, Tomlinson 2007, Ruiz de Gauna 2023, Neurauter 2009 (from Proposition)
+- [x] Obtain PDFs: Huang 2016, Battisti 2012 (open access downloads)
 - [ ] Verify Lim 2024 stiffness/damping values (Claims C1, C2)
 - [ ] Verify Tomlinson 2007 non-linearity description (Claim C3)
 - [ ] Verify Ruiz de Gauna 2023 dynamic softening (Claim C4)
