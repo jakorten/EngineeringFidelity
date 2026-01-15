@@ -93,6 +93,80 @@
 
 ---
 
+## Source 3: SURV1VE Trial 2024 (Arch Dis Child Fetal Neonatal Ed)
+
+**Citation:** "Sustained inflation and chest compression versus 3:1 compression:ventilation ratio during CPR of asphyxiated newborns." Arch Dis Child Fetal Neonatal Ed. 2024;109:608-615.
+
+**DOI:** [10.1136/archdischild-2023-326383](https://doi.org/10.1136/archdischild-2023-326383)
+**PMC:** [PMC11228189](https://pmc.ncbi.nlm.nih.gov/articles/PMC11228189/)
+
+### Study Design
+- **Sample:** 27 newborns (12 CC+SI, 15 standard 3:1)
+- **Setting:** 4 hospitals in Canada and Austria
+- **Note:** Terminated early (target was 218) due to funding/regulatory issues
+
+### Interventions Compared
+
+| Parameter | CC+SI | Standard 3:1 |
+|-----------|-------|--------------|
+| Compressions | 90/min continuous | 3:1 ratio with ventilations |
+| Inflation pressure | 25-30 cmH₂O sustained | Standard PPV |
+| PEEP | 5-8 cmH₂O | Standard |
+
+### Outcomes (Not statistically significant due to small n)
+
+| Outcome | CC+SI | 3:1 C:V | p-value |
+|---------|-------|---------|---------|
+| Time to ROSC | 90 (60-270) s | 615 (174-780) s | 0.0502 |
+| Mortality | 2/11 (18.2%) | 8/14 (57.1%) | NS |
+
+### Relevance to Manikin Design
+- Compression rate of 90/min for CC+SI differs from standard 100-120/min
+- Continuous compressions (no pause for ventilation) is alternative approach
+- **Note:** Authors caution against clinical use outside research settings
+
+---
+
+## Source 4: Novel CC Technique 2025 (Children)
+
+**Citation:** "Evaluating Novel Chest Compression Technique in Infant CPR: Enhancing Efficacy and Reducing Rescuer Fatigue." Children. 2025;12(3):346.
+
+**DOI:** [10.3390/children12030346](https://doi.org/10.3390/children12030346)
+**PMC:** [PMC11940949](https://pmc.ncbi.nlm.nih.gov/articles/PMC11940949/)
+
+### Study Design
+- **Sample:** 34 medical students
+- **Design:** Randomized crossover trial
+- **Duration:** 2-minute compression cycles with 15-min rest
+
+### Technique Description
+Novel technique (nT): Dominant hand with index finger flexed at proximal interphalangeal joint. External (dorsal) surface of middle phalanx contacts sternum, thumb supports from opposite side.
+
+### Compression Adequacy Comparison
+
+| Technique | Adequate Rate | Mean Depth (mm) |
+|-----------|---------------|-----------------|
+| **Novel (nT)** | **92.4%** | 42.9 |
+| Two-Thumb (TTHT) | 78.6% | 44.2 |
+| Two-Finger (TFT) | 65.2% | 38.6 |
+
+### Rescuer Fatigue (Lower = Better)
+
+| Measure | nT | TTHT | TFT |
+|---------|-----|------|-----|
+| Fatigue (RPE) | 3.63 | 4.06 | 6.63 |
+| Hand Pain (NRS) | 3.48 | 4.36 | 6.93 |
+
+### Key Finding
+Novel technique "bridges the gap, offering TTHT-like depth with TFT-like adaptability" - promising for single-rescuer scenarios.
+
+### Relevance to Manikin Design
+- Target depth ~43mm for adequate compression on manikin
+- Technique comparison data useful for training feedback design
+- Fatigue metrics important for extended CPR scenarios
+
+---
+
 ## Evidence Gap Identified
 
 **No published data on:**
@@ -109,8 +183,11 @@
 - [Japan Laser Study 2024 - PubMed](https://pubmed.ncbi.nlm.nih.gov/38602429/) **[WEB VERIFIED]**
 - [2025 AHA Guidelines - Circulation](https://doi.org/10.1161/CIR.0000000000001367) **[WEB VERIFIED]**
 - [AHA News Release](https://newsroom.heart.org/news/updated-cpr-guidelines-released-for-pediatric-and-neonatal-emergency-care-and-resuscitation)
+- [SURV1VE Trial 2024 - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11228189/) **[WEB VERIFIED]**
+- [Novel CC Technique 2025 - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11940949/) **[WEB VERIFIED]**
 
 ---
 
 *Extracted: 2026-01-15*
+*Updated: 2026-01-15 - Added SURV1VE Trial and Novel CC Technique*
 *Status: [WEB VERIFIED] - PDF download recommended for Japan study*

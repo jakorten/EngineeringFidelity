@@ -87,25 +87,41 @@ These papers have bot-protection and need manual download.
 
 ---
 
-### SURV1VE Trial 2024
+### SURV1VE Trial 2024 - **OBTAINED**
 **Title:** Sustained inflation and chest compression versus 3:1 compression:ventilation ratio during CPR of asphyxiated newborns
 **Journal:** Arch Dis Child Fetal Neonatal Ed 2024;109:608-615
 **DOI:** [10.1136/archdischild-2023-326383](https://doi.org/10.1136/archdischild-2023-326383)
 **PMC:** PMC11228189
 **Link:** https://fn.bmj.com/content/109/6/608
 
-**Key content:** Cluster RCT comparing sustained inflation + CC vs 3:1 ratio in newborns
+**Status:** [x] Web verified - data extracted
+
+**Key data extracted:**
+- n=27 newborns (terminated early, target was 218)
+- CC+SI: Time to ROSC 90s vs 615s (3:1), p=0.0502
+- Mortality: CC+SI 18.2% vs 3:1 57.1% (NS due to small n)
+- Authors caution: Do not use CC+SI outside research settings
+
+**See:** `md_out/infant_compression_reference_values.md`
 
 ---
 
-### Novel CC Technique 2025
+### Novel CC Technique 2025 - **OBTAINED**
 **Title:** Evaluating Novel Chest Compression Technique in Infant CPR: Enhancing Efficacy and Reducing Rescuer Fatigue
 **Journal:** Children 2025, 12(3), 346
 **DOI:** [10.3390/children12030346](https://doi.org/10.3390/children12030346)
 **PMC:** PMC11940949
 **Link:** https://www.mdpi.com/2227-9067/12/3/346
 
-**Key finding:** Novel technique achieved 92.4% adequate compression rate vs 78.6% (TTHT) and 65.2% (TFT)
+**Status:** [x] Web verified - data extracted
+
+**Key data extracted:**
+- n=34 medical students, crossover trial
+- Adequate compression rates: nT 92.4%, TTHT 78.6%, TFT 65.2%
+- Mean depth: nT 42.9mm, TTHT 44.2mm, TFT 38.6mm
+- Novel technique reduces fatigue vs TFT
+
+**See:** `md_out/infant_compression_reference_values.md`
 
 ---
 
@@ -149,6 +165,8 @@ These papers have bot-protection and need manual download.
 | **Diedericks et al. - Chest wall role review** | 2025 | [x] Web verified - extracted |
 | **Japan CC depth - Infant compression targets** | 2024 | [x] Web verified - extracted |
 | **2025 AHA Guidelines - Neonatal resuscitation** | 2025 | [x] Web verified - extracted |
+| **SURV1VE Trial - CC+SI vs 3:1 ratio** | 2024 | [x] Web verified - extracted |
+| **Novel CC Technique - 92.4% adequate rate** | 2025 | [x] Web verified - extracted |
 
 ---
 
