@@ -134,9 +134,10 @@ See: `DR-001_reference_model_scope.md`
 
 ## Next Session Priorities
 
-1. **MPXV5010GP ordered** — pin-compatible replacement for MPXV5050
+1. **MPXV5010GP ×5 ordered** (2026-01-15) — pin-compatible replacement for MPXV5050
    - 0-10 kPa range, ±0.25 kPa accuracy
    - Serves both C/R measurement and blocked airway detection
+   - Multiple units for spares + sensor variation check
 2. **Discuss with Bronkhorst** re: pressure calibration reference
    - Option A: EL-PRESS P-506C (traceable, automated)
    - Option B: Water column manometer (primary standard, manual)
