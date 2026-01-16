@@ -130,6 +130,15 @@ See: `DR-001_reference_model_scope.md`
 - [x] Apparatus planning: load cell firmware needed, MPXV5010DP needed for ventilation
 - Remaining P0 claims blocked by: M1-M2 (own work), RC1-RC2/RV1-RV3 (experiments)
 
+### Session 2026-01-16 (Literature + Oracles)
+- [x] Added new PDFs: Diedericks 2025, Reiss 2025, Ikeyama 2024, novel_cc_2025, survive_2024
+- [x] Renamed PDFs to consistent format
+- [x] Removed irrelevant jotten2008.pdf (telecommunications)
+- [x] Strengthened V3 claim with Diedericks 2025 (FASEB review): "CCW ~3× CL term, ~5× preterm"
+- [x] Created article summary: diedericks_2025_chest_wall_summary.md
+- [x] Fetched MST author guidelines → `vv/oracles/MST_Author_Guidelines.md`
+- Next: DR-002 (manikin inventory), experimental protocol
+
 ---
 
 ## Next Session Priorities
