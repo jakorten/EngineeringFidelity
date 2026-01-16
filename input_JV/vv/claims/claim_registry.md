@@ -1,10 +1,10 @@
 # Claim Registry
 
-**Paper:** Engineering Fidelity of Infant CPR Manikin Ventilation (MST Special Issue)
-**Last Updated:** 2026-01-15 (DR-001 scope decision)
-**Thesis:** Data-driven reference model enables objective evaluation of infant manikin ventilation fidelity
+**Paper:** Engineering Fidelity of Infant CPR Manikins (MST Special Issue)
+**Last Updated:** 2026-01-16 (DR-001 scope revision)
+**Thesis:** Data-driven reference model enables objective evaluation of infant manikin fidelity
 
-**Scope:** Infant ventilation only (per DR-001)
+**Scope:** Infant ventilation (primary, with fidelity index) + Infant compression (secondary, descriptive) — per DR-001 rev.
 
 ---
 
@@ -12,14 +12,14 @@
 
 | Priority | Total | Verified | Needs Evidence | Coverage |
 |----------|-------|----------|----------------|----------|
-| P0 | 8 | 5 | 3 | 63% |
-| P1 | 4 | 1 | 3 | 25% |
+| P0 | 10 | 6 | 4 | 60% |
+| P1 | 5 | 2 | 3 | 40% |
 | P2 | 1 | 0 | 1 | 0% |
-| **Total** | **13** | **6** | **7** | **46%** |
+| **Total** | **16** | **8** | **8** | **50%** |
 
 **Target:** >=85% overall, 100% P0
 
-**Note:** Compression claims moved to out-of-scope per DR-001 (infant ventilation focus)
+**Note:** Ventilation claims evaluated against human reference (fidelity index); Compression claims descriptive only (no human reference for infants)
 
 ---
 
@@ -56,13 +56,30 @@
 | M2 | Multiple infant manikin models tested | P0 | [OWN DATA] | [ ] |
 | M3 | Unit-to-unit variation assessed | P1 | [OWN DATA] | [ ] |
 
-### Section 5: Results -- Ventilation Fidelity
+### Section 5a: Results -- Ventilation Fidelity
 
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
 | RV1 | Manikin compliance values (to be measured) | P0 | [OWN DATA] | [ ] |
 | RV2 | Manikin resistance values (to be measured) | P0 | [OWN DATA] | [ ] |
 | RV3 | Deviation from human reference (to be calculated) | P0 | [OWN DATA] | [ ] |
+
+### Section 5b: Results -- Compression Characterization (Descriptive)
+
+| ID | Claim | Priority | Source | Status |
+|----|-------|----------|--------|--------|
+| RC1 | Infant manikin stiffness values (to be measured) | P0 | [OWN DATA] | [ ] |
+| RC2 | Infant manikin force-displacement curves (to be measured) | P0 | [OWN DATA] | [ ] |
+| RC3 | Comparison between manikin models (no human reference) | P1 | [OWN DATA] | [ ] |
+
+**Note:** No human reference exists for infant chest compression mechanics. RC1-RC3 are descriptive characterization only.
+
+### Section 5c: Human Reference Model -- Infant Compression (Literature Gap)
+
+| ID | Claim | Priority | Source | Status |
+|----|-------|----------|--------|--------|
+| C5 | Infant chest compression mechanics are uncharacterized in literature | P1 | Babic 2017 | [x] VERIFIED: "Little research performed on pediatric chest mechanics" |
+| C7 | Infant compression depth varies with age (2.7 cm at 0-2 mo) | P1 | Ikeyama 2024 (n=555) | [x] VERIFIED: 0-2mo: 2.7cm, 49% over-compressed at 4cm target |
 
 ### Section 6: Engineering Fidelity Index
 
@@ -77,14 +94,16 @@
 |----|-------|----------|--------|--------|
 | D1 | First systematic infant manikin ventilation benchmark | P0 | Novelty claim | [x] VERIFIED: No multi-manikin infant ventilation benchmark found |
 | D2 | Addresses gap identified by Reiss 2015 | P0 | Literature gap | [x] VERIFIED: Reiss 2015 explicitly calls for manikin C/R characterization |
+| D3 | First systematic infant manikin compression characterization | P1 | Novelty claim | [ ] |
+| D4 | Compression data enables future validation when human reference available | P2 | Future work | [ ] |
 
 ---
 
 ## Out of Scope (per DR-001)
 
-The following claims were verified but excluded due to infant ventilation focus. Preserved here for future reference:
+The following claims were verified but excluded due to infant-only focus. Preserved here for future reference:
 
-### Compression Claims (Verified but Excluded)
+### Adult Compression Claims (Verified but Excluded)
 
 | ID | Claim | Source | Verification |
 |----|-------|--------|--------------|
@@ -92,10 +111,8 @@ The following claims were verified but excluded due to infant ventilation focus.
 | C2 | Adult chest damping ~0.17 N·s/mm | Nysæther 2008 (n=59) | [x] 169±60 N·s/m |
 | C3 | Force-displacement is non-linear | Tomlinson 2007 (n=91) | [x] Progressivity factor 1.41±0.25 |
 | C4 | Stiffness decreases ~35% after 3000 compressions | Ruiz de Gauna 2023 (n=615) | [x] 34.6% (95% CI 33.0-36.1) |
-| C5 | Infant chest properties uncharacterized | Babic 2017 | [x] "Little research performed..." |
-| C7 | Infant compression depth age-dependent | Ikeyama 2024 (n=555) | [x] 0-2mo: 2.7cm, 49% over-compressed at 4cm |
 
-**Reason excluded:** Only infant manikins available; no human reference for infant compression validation.
+**Reason excluded:** Only infant manikins available; adult manikins not in scope.
 
 ### Source Locations (for reference)
 
@@ -117,7 +134,8 @@ These claims, if wrong, break the paper:
 |----|---------------|
 | V1-V2 | Human reference model invalid |
 | I2-I3, D1-D2 | Novelty claim challenged |
-| RV1-RV3 | Core results invalid |
+| RV1-RV3 | Ventilation results invalid |
+| RC1-RC2 | Compression results invalid |
 | M1-M2 | Protocol credibility lost |
 
 ### P1 (Important) -- Target 90%
@@ -127,11 +145,15 @@ Strengthen but don't break argument:
 - U1-U2: Envelope methodology
 - M3: Variation analysis
 - EF1: Fidelity formula
+- C5, C7: Infant compression context (literature gap)
+- RC3: Manikin comparison
+- D3: Compression novelty
 
 ### P2 (Supporting) -- Target 70%
 
 Nice to have:
 - EF2: Procurement implication
+- D4: Future work
 
 ---
 
@@ -151,6 +173,7 @@ Nice to have:
 | Data Source | Claims | What to Check |
 |-------------|--------|---------------|
 | Ventilation tests | RV1, RV2, RV3 | Data files exist, analysis reproducible |
+| Compression tests | RC1, RC2, RC3 | Data files exist, analysis reproducible |
 
 ---
 
@@ -167,6 +190,6 @@ Nice to have:
 
 *Registry created: 2026-01-15*
 *Scope change: 2026-01-15 — Infant ventilation focus (DR-001)*
-*Last update: 2026-01-15 — Added compression claim details to out-of-scope section*
-*Current: 6/13 claims verified (46%), 5/8 P0 verified (63%)*
-*Remaining P0: M1, M2 (own work), RV1-RV3 (own data - pending experiments)*
+*Scope revision: 2026-01-16 — Added infant compression (descriptive) per DR-001 rev.*
+*Current: 8/21 claims verified (38%), 6/12 P0 verified (50%)*
+*Remaining P0: M1, M2 (own work), RV1-RV3, RC1-RC2 (own data - pending experiments)*

@@ -1,7 +1,8 @@
 ---
 status: DECIDED
 date: 2026-01-15
-decision: Option C - Infant Ventilation Focus
+updated: 2026-01-16
+decision: Option D - Infant Ventilation (Primary) + Compression (Secondary)
 ---
 
 # Decision: Reference Model Scope
@@ -20,64 +21,71 @@ The paper needs to define what human reference data to include and what manikins
 | Option | Human Reference | Novelty | Feasibility |
 |--------|-----------------|---------|-------------|
 | Infant compression only | **None** (Babic 2017 used scaled adult) | Medium | Cannot validate |
-| **Infant ventilation only** | **Huang 2016 (n=205)** | **High** | **Can validate** |
-| Infant compression + ventilation | Partial (ventilation only) | High | Mixed validity |
+| Infant ventilation only | **Huang 2016 (n=205)** | **High** | **Can validate** |
+| **Infant compression + ventilation** | **Partial (ventilation only)** | **High** | **Mixed validity** |
 
 ## Decision
 
-**Option C: Infant Ventilation Focus**
+**Option D: Infant Ventilation (Primary) + Compression (Secondary)**
 
 ### Rationale
 
-1. **Human reference exists:** Huang 2016 provides compliance (78-171 mL/kPa) and resistance (3.7-6.4 kPa/L/s) for infants aged 1-96 weeks (n=205)
+1. **Human reference exists for ventilation:** Huang 2016 provides compliance (78-171 mL/kPa) and resistance (3.7-6.4 kPa/L/s) for infants aged 1-96 weeks (n=205)
 
 2. **Strong novelty:** Verified (D2) - no systematic manikin ventilation benchmark exists. Reiss 2015 explicitly called for this work.
 
-3. **Validation possible:** Can compare manikin C/R values against human reference envelope
+3. **Ventilation validation possible:** Can compare manikin C/R values against human reference envelope
 
-4. **Equipment ready:** SDP810 + MFM operational; only need airway pressure sensor
+4. **Ventilation equipment ready:** SDP810 + MFM operational; Bronkhorst EL-PRESS P-502C for airway pressure
 
-5. **Infant compression excluded:** No human reference data exists to validate against (Babic 2017 confirms this gap)
+5. **Compression included but without human reference:**
+   - DYMH-103 load cell (0-49 N) available; suitable for infant compression forces (14-30 N range per Ikeyama 2024)
+   - No human reference data exists for infant chest mechanics (Babic 2017 confirms this gap)
+   - Compression data will be **descriptive** (characterizing manikins) rather than **evaluative** (comparing to human reference)
 
 ### Scope Definition
 
 | Include | Exclude |
 |---------|---------|
 | Infant manikin ventilation characterization | Adult manikins |
-| Compliance (C) measurement | Adult ventilation |
-| Resistance (R) measurement | Compression mechanics |
-| Human reference envelope (Huang 2016) | — |
-| Engineering fidelity index (ventilation) | — |
+| Infant manikin compression characterization | Adult ventilation/compression |
+| Compliance (C) measurement (ventilation) | — |
+| Resistance (R) measurement (ventilation) | — |
+| Force-displacement curves (compression) | — |
+| Human reference envelope (Huang 2016, ventilation) | — |
+| Engineering fidelity index (ventilation only) | — |
+| Compression data (descriptive, no fidelity index) | — |
 
 ### Paper Positioning
 
 **Title revision suggestion:**
-"Engineering Fidelity of Infant CPR Manikin Ventilation: A Data-Driven Reference Model for Respiratory Mechanics"
+"Engineering Fidelity of Infant CPR Manikins: A Data-Driven Reference Model for Respiratory and Compression Mechanics"
 
 **Key claims:**
 - First systematic benchmark of infant manikin respiratory mechanics
-- Quantitative comparison against human infant reference data
+- Quantitative comparison against human infant reference data (ventilation)
 - Engineering fidelity index for ventilation compliance and resistance
+- First characterization of infant manikin compression mechanics (descriptive)
 
 ## Implications
 
 ### Apparatus
 - [x] Flow measurement (SDP810 + MFM) — ready
-- [ ] Airway pressure sensor — pending Bronkhorst discussion
-- ~~Load cell integration~~ — **not needed for this scope**
+- [x] Airway pressure sensor — Bronkhorst EL-PRESS P-502C (ordered)
+- [x] Load cell — DYMH-103 (0-49 N) available
 
 ### Data Collection
 - Infant manikins only
 - Ventilation characterization: C and R at target tidal volumes
+- Compression characterization: force-displacement curves
 - Multiple replicates for unit-to-unit variation
 
 ### Claims Registry Update Needed
-- Remove/deprioritize compression claims (C1-C5, RC1-RC2)
-- Focus on ventilation claims (V1-V2, RV1-RV3)
-- Update novelty claims (I2, I3, D1, D2) for ventilation focus
+- Re-add compression claims for infant manikins (descriptive characterization)
+- Focus on ventilation claims (V1-V2, RV1-RV3) for fidelity evaluation
+- Update novelty claims (I2, I3, D1, D2) for combined scope
 
 ## Revisit If
 
 - Adult manikins become available
-- Human infant compression data published
-- Co-authors request broader scope
+- Human infant compression data published (enables compression fidelity index)

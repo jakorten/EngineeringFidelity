@@ -35,9 +35,8 @@
 - [ ] Plan data file naming convention
 
 ### Data Collection (pending)
-- [ ] Compression characterization -- adult manikins
-- [ ] Compression characterization -- infant manikins
-- [ ] Ventilation characterization -- infant manikins
+- [ ] Compression characterization -- infant manikins (DYMH-103 load cell)
+- [ ] Ventilation characterization -- infant manikins (Bronkhorst EL-PRESS + SDP810)
 - [ ] Unit-to-unit variation testing
 
 ### Analysis (pending)
@@ -64,20 +63,21 @@
 
 ## Delayed Decisions
 
-### DR-001: Reference Model Scope (DECIDED)
-**Decision:** Infant ventilation focus
+### DR-001: Reference Model Scope (DECIDED — REVISED)
+**Decision:** Infant ventilation (primary) + Infant compression (secondary)
 
 **Rationale:**
 - Only infant manikins available
 - Test equipment suitable for infant manikins only
 - Human reference exists for infant ventilation (Huang 2016, n=205)
-- No human reference exists for infant compression (cannot validate)
+- No human reference exists for infant compression — characterization is **descriptive only**
 - Strongest novelty: no prior infant manikin ventilation benchmark
 
 **Implications:**
-- Compression claims moved out of scope
-- Load cell integration no longer priority
-- Focus on airway pressure sensor (Bronkhorst discussion)
+- Ventilation: fidelity index against human reference (Huang 2016)
+- Compression: descriptive characterization (force-displacement curves, stiffness)
+- DYMH-103 load cell (0-49 N) suitable for infant compression (14-30 N range)
+- Bronkhorst EL-PRESS P-502C for airway pressure
 
 See: `DR-001_reference_model_scope.md`
 
@@ -137,7 +137,10 @@ See: `DR-001_reference_model_scope.md`
 - [x] Strengthened V3 claim with Diedericks 2025 (FASEB review): "CCW ~3× CL term, ~5× preterm"
 - [x] Created article summary: diedericks_2025_chest_wall_summary.md
 - [x] Fetched MST author guidelines → `vv/oracles/MST_Author_Guidelines.md`
-- Next: DR-002 (manikin inventory), experimental protocol
+- [x] **Revised DR-001 scope:** infant ventilation (primary) + infant compression (secondary)
+- [x] Updated claim registry with infant compression claims (RC1-RC3, C5, C7, D3, D4)
+- [x] DYMH-103 load cell (0-49 N) confirmed suitable for infant compression (14-30 N)
+- Next: DR-002 (manikin inventory), load cell integration, experimental protocol
 
 ---
 
@@ -160,5 +163,10 @@ See: `DR-001_reference_model_scope.md`
    Interface: RS232 or Modbus (compatible with existing MFM setup)
    ```
 3. **Inventory infant manikins** (DR-002)
-4. ~~Load cell firmware integration~~ — deprioritized per DR-001 (ventilation focus)
-5. ~~Decision on reference model scope (DR-001)~~ — **DECIDED: infant ventilation**
+4. **Load cell firmware integration** — hardware ready
+   - DYMH-103 (0-5kg = 0-49N) — suitable for infant compression (14-30 N)
+   - HX711 ADC (Sparkfun, 24-bit) — available
+   - STM32F405 — needs firmware update for HX711 readout
+   - **WAITING:** Calibration weights availability check (HAN lab)
+   - TODO: Wire HX711 → STM32, add readout code, calibrate
+5. ~~Decision on reference model scope (DR-001)~~ — **DECIDED: infant ventilation (primary) + compression (secondary)**
