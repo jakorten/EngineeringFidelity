@@ -56,7 +56,7 @@
 - [ ] Draft Section 8: Conclusion
 
 ### Oracles (pending)
-- [ ] Download MST author guidelines
+- [x] Download MST author guidelines — **See `vv/oracles/MST_Author_Guidelines.md`**
 - [ ] Find exemplar papers from MST special issues
 - [ ] Document data availability requirements
 
