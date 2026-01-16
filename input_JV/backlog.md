@@ -147,9 +147,18 @@ See: `DR-001_reference_model_scope.md`
    - 0-10 kPa range, ±0.25 kPa accuracy
    - Backup / blocked airway detection
 2. **Bronkhorst: EL-PRESS (0-100 mbar) confirmed** (2026-01-16)
-   - Bronkhorst will provide overpressure sensor in 100 mbar range
+   - Bronkhorst will provide overpressure sensor
    - SI-traceable, factory calibrated
    - Primary sensor for Paw measurement + calibration reference
+
+   **Order specification:**
+   ```
+   Model:    P-502C (EL-PRESS)
+   Type:     Gauge (overpressure relative to atmosphere)
+   Range:    0-100 mbar
+   Use:      Airway pressure (Paw) measurement, infant ventilation
+   Interface: RS232 or Modbus (compatible with existing MFM setup)
+   ```
 3. **Inventory infant manikins** (DR-002)
 4. ~~Load cell firmware integration~~ — deprioritized per DR-001 (ventilation focus)
 5. ~~Decision on reference model scope (DR-001)~~ — **DECIDED: infant ventilation**
