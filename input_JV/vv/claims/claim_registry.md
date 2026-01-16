@@ -39,7 +39,7 @@
 |----|-------|----------|--------|--------|
 | V1 | Infant compliance ~78 mL/kPa (1-24 wks) to ~171 mL/kPa (73-96 wks) | P0 | Huang 2016 | [x] VERIFIED: Table 2, n=205, 77.95±46.16 to 170.58±50.14 mL/kPa |
 | V2 | Infant resistance ~6.4 kPa/L/s (1-24 wks) to ~3.7 kPa/L/s (73-96 wks) | P0 | Huang 2016 | [x] VERIFIED: Table 2, n=205, median 6.39 to 3.74 kPa/L/s |
-| V3 | Infant chest wall 3× more compliant than lungs (Ccw/CL ≈ 3:1) | P1 | Stoecklin 2024, Diedericks 2025 | [x] VERIFIED: Ccw/kg 3.0 vs CL/kg 0.95 mL/cmH₂O/kg (n=23) |
+| V3 | Infant chest wall 3× more compliant than lungs (Ccw/CL ≈ 3:1) | P1 | Stoecklin 2024, Diedericks 2025 | [x] VERIFIED: Stoecklin 2024 (n=23): Ccw/kg 3.0 vs CL/kg 0.95; Diedericks 2025 (FASEB review): "CCW ~3× CL in term, ~5× in preterm" |
 
 ### Section 3: Uncertainty Envelope
 
@@ -102,7 +102,8 @@ The following claims were verified but excluded due to infant ventilation focus.
 | Source | File |
 |--------|------|
 | Nysæther 2008 | `/research/articles/md_out/Manikins_With_Human_Like_Chest_Propertie.md` |
-| Ikeyama 2024 | `/research/articles/md_out/Chest Compression Depth Targets...Japan, 2019–2022.md` |
+| Ikeyama 2024 | `input_JV/literature/pdfs/ikeyama_2024_infant_cc_depth.pdf` |
+| Diedericks 2025 | `input_JV/literature/pdfs/diedericks_2025_chest_wall.pdf` |
 
 ---
 
@@ -142,6 +143,7 @@ Nice to have:
 |--------|--------|---------------|--------|
 | Huang 2016 | V1, V2 | Infant compliance 78-171 mL/kPa, resistance 3.7-6.4 kPa/L/s (n=205) | [x] VERIFIED |
 | Stoecklin 2024 | V3 | Preterm Ccw/CL ratio ~3:1 | [x] VERIFIED |
+| Diedericks 2025 | V3 | Review: CCW ~3× CL term, ~5× preterm | [x] VERIFIED |
 | Reiss 2015 | I2, D2 | Call for manikin C/R characterization | [x] VERIFIED |
 
 ### Own Data (verify data files exist and analysis correct)
