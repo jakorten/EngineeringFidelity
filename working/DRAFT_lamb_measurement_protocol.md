@@ -31,7 +31,7 @@ Measure force-displacement characteristics of lamb chest to establish reference 
 
 ## Equipment
 
-### Available (HAN)
+### Available (home lab → transport to LUMC via trailer)
 - CNC linear actuator (BlackBox X32)
 - Load cell DYMH-103 (0-49 N)
 - Displacement sensor VL53L4CD
@@ -41,6 +41,12 @@ Measure force-displacement characteristics of lamb chest to establish reference 
 - Compression plunger (~30 mm diameter, flat or slightly curved)
 - Positioning support/jig
 - Calipers for chest measurement
+- Power supply / extension cables for LUMC setup
+
+### Backup: Portable IMU setup (if CNC impractical)
+- Bosch BHI360 IMU (6-axis + sensor fusion)
+- Requires pre-validation against CNC reference
+- Only if space/power constraints at LUMC
 
 ---
 
@@ -143,9 +149,10 @@ H = (loop_area / loading_area) × 100%
 
 1. Does LUMC have existing ethical approval for lamb mechanical testing?
 2. Can we use animals from other studies (opportunistic)?
-3. Equipment at LUMC or transport from HAN?
+3. ~~Equipment at LUMC or transport from HAN?~~ **RESOLVED: Transport CNC to LUMC via trailer**
 4. Fresh post-mortem or anesthetized?
 5. Sample size for statistical validity?
+6. Space/power requirements at LUMC for CNC setup?
 
 ---
 

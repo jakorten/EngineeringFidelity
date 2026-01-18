@@ -99,6 +99,8 @@ See: `DR-001_reference_model_scope.md`
 - Sample size (n) and weight range
 - Publication/source for citation
 
+**Hardware:** Transport dedicated CNC setup to LUMC via trailer. IMU (BHI360) as backup only.
+
 **Impact:** Would enable fidelity index for compression (not just descriptive characterization)
 
 ---
