@@ -112,7 +112,7 @@ See: `DR-001_reference_model_scope.md`
 | Prof. dr. dr. Egon L. van den Broek | - | Promotor | |
 | Dr. Jeroen Veen | - | Promotor | |
 | Timo de Raad | WKZ, NRR, ERC | Co-author | Clinical/resuscitation expertise |
-| Prof. Arjen ten Pas | LUMC | Advisor | Potential lamb data provider (DR-003) |
+| Prof. dr. Arjen ten Pas | LUMC | Advisor | Potential lamb data provider (DR-003) |
 | Jozua van Duuren | WKZ | Co-author/Advisor | Specialized nurse, involved in prior papers |
 
 ---

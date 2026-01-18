@@ -57,7 +57,7 @@ HAN University of Applied Sciences
 - Prof. dr. dr. Egon L. van den Broek (Promotor)
 - Dr. Jeroen Veen (Promotor)
 - Timo de Raad (WKZ, NRR, ERC)
-- Prof. Arjen ten Pas (LUMC)
+- Prof. dr. Arjen ten Pas (LUMC)
 - Jozua van Duuren (WKZ)
 
 ---
