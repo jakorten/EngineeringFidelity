@@ -355,6 +355,32 @@ Where:
 
 **Surrogate Reference:** Lamb data (~3.5 kg) from Arjen ten Pas (LUMC) - pending DR-003
 
+---
+
+#### Animal Models in Neonatal Resuscitation Research
+
+| Aspect | Piglet | Lamb |
+|--------|--------|------|
+| **Primary use** | Chest compression mechanics | Ventilation/fetal transition |
+| **Chest mechanics** | Similar to infant | Different geometry |
+| **Circulation model** | Postnatal | Fetal → neonatal |
+| **Lung state** | Air-filled | Fluid → air transition |
+| **Weight** | 1.7-2.4 kg | ~3.5 kg |
+
+**Piglet model:**
+- Chest geometry similar to human infant (broader chest)
+- Similar chest size and stiffness
+- Stiffness: 4.8 N/mm initially, 2.9 N/mm after 200 compressions (Neurauter 2009)
+- Well-established for CPR research
+
+**Lamb model:**
+- Ideal for fetal-to-neonatal transition studies
+- Used for ventilation/oxygenation research (fluid-filled → air-filled lungs)
+- Larger size allows instrumentation
+- Different chest geometry than piglets
+
+**Note:** Piglet data may be more directly relevant for compression mechanics, but lamb data is what's potentially available via LUMC collaboration. Worth confirming with Arjen ten Pas what parameters are typically measured on lambs.
+
 **Required Parameters (same as model):**
 | Parameter | Symbol | Unit | Status |
 |-----------|--------|------|--------|

@@ -19,6 +19,25 @@ Measure force-displacement characteristics of lamb chest to establish reference 
 
 ---
 
+## Background: Animal Models
+
+| Model | Primary use | Chest mechanics |
+|-------|-------------|-----------------|
+| **Piglet** | CPR/compression studies | Similar to infant |
+| **Lamb** | Ventilation/fetal transition | Different geometry |
+
+**Why lamb (not piglet)?**
+- LUMC (Arjen ten Pas) has lamb infrastructure for neonatal resuscitation research
+- Lambs used for fetal-to-neonatal transition studies
+- ~3.5 kg weight matches term infant
+- Opportunity for collaboration
+
+**Caveat:** Piglet chest mechanics may be more directly comparable to human infant. Lamb chest geometry differs. Results should be interpreted with this in mind.
+
+**Question for Arjen:** Are compression forces typically measured on lambs at LUMC, or only ventilation parameters?
+
+---
+
 ## Animal Specifications
 
 | Parameter | Target | Rationale |
