@@ -1,7 +1,7 @@
 # Claim Registry
 
 **Paper:** Engineering Fidelity of Infant CPR Manikins (MST Special Issue)
-**Last Updated:** 2026-01-21 (Added O'Reilly 2024, Thielen 2017)
+**Last Updated:** 2026-01-21 (Infant stiffness gap confirmed; Kent/Nysæther sources added)
 **Thesis:** Data-driven reference model enables objective evaluation of infant manikin fidelity
 
 **Scope:** Infant ventilation (primary, with fidelity index) + Infant compression (secondary, descriptive) — per DR-001 rev.
@@ -12,10 +12,10 @@
 
 | Priority | Total | Verified | Needs Evidence | Coverage |
 |----------|-------|----------|----------------|----------|
-| P0 | 10 | 6 | 4 | 60% |
-| P1 | 7 | 4 | 3 | 57% |
+| P0 | 11 | 7 | 4 | 64% |
+| P1 | 9 | 6 | 3 | 67% |
 | P2 | 1 | 0 | 1 | 0% |
-| **Total** | **18** | **10** | **8** | **56%** |
+| **Total** | **21** | **13** | **8** | **62%** |
 
 **Target:** >=85% overall, 100% P0
 
@@ -80,8 +80,10 @@
 
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
-| C5 | Infant chest compression mechanics are uncharacterized in literature | P1 | Babic 2017, O'Reilly 2024 | [x] VERIFIED: Babic 2017: "Little research performed on pediatric chest mechanics"; O'Reilly 2024 used piglet model due to lack of human infant data |
+| C5 | Infant chest compression stiffness (N/mm) does not exist in published literature | P0 | Kent 2010, Kent 2009, Nysæther 2009 | [x] VERIFIED: Kent 2010: "No experimental data exist"; youngest data is 6-7yo (Kent 2012); expert consensus reached but N/mm values unpublished (Nysæther 2009) |
+| C6 | Youngest published chest stiffness data is 6-7 years old (not infant) | P1 | Kent 2009, Kent 2012 | [x] VERIFIED: Kent 2009 n=18 ages 8-22yo (309±55N at 39±5mm); Kent 2012 PMHS ages 6-7yo |
 | C7 | Infant compression depth varies with age (2.7 cm at 0-2 mo) | P1 | Ikeyama 2024 (n=555) | [x] VERIFIED: 0-2mo: 2.7cm, 49% over-compressed at 4cm target |
+| C8 | Scaling adult chest data to pediatric does not work | P1 | Kent 2010 | [x] VERIFIED: "Scaling...did not successfully predict the pediatric behavior" |
 
 ### Section 6: Engineering Fidelity Index
 
@@ -125,6 +127,10 @@ The following claims were verified but excluded due to infant-only focus. Preser
 | Diedericks 2025 | `input_JV/literature/pdfs/diedericks_2025_chest_wall.pdf` |
 | O'Reilly 2024 | `input_JV/literature/pdfs/oreilly_2024_machine_vs_human_cc.pdf` |
 | Thielen 2017 | `input_JV/literature/pdfs/thielen_2017_humanlike_thorax.pdf` |
+| Kent 2009 | PMID 19085159 (Stapp Car Crash J) |
+| Kent 2010 | PMID 20058561 (Stapp Car Crash J) |
+| Kent 2012 | PMID 22931180 (Traffic Inj Prev) |
+| Nysæther 2009 | PMID 19699023 (Resuscitation) |
 
 ---
 
@@ -141,6 +147,7 @@ These claims, if wrong, break the paper:
 | RV1-RV3 | Ventilation results invalid |
 | RC1-RC2 | Compression results invalid |
 | M1-M2 | Protocol credibility lost |
+| C5 | Infant compression gap claim challenged |
 
 ### P1 (Important) -- Target 90%
 
@@ -151,7 +158,9 @@ Strengthen but don't break argument:
 - U1-U2: Envelope methodology
 - M3: Variation analysis
 - EF1: Fidelity formula
-- C5, C7: Infant compression context (literature gap)
+- C6: Youngest stiffness data is 6-7yo (strengthens C5)
+- C7: Infant compression depth varies with age
+- C8: Adult-to-pediatric scaling doesn't work
 - RC3: Manikin comparison
 - D3: Compression novelty
 
@@ -175,6 +184,10 @@ Nice to have:
 | Reiss 2015 | I2, D2 | Call for manikin C/R characterization | [x] VERIFIED |
 | O'Reilly 2024 | I4, C5 | Force profile > depth (piglet n=12); used animal model due to human data gap | [x] VERIFIED |
 | Thielen 2017 | I2, I5 | SimMan/Apollo inadequate; classical manikins linear vs human nonlinear F-D | [x] VERIFIED |
+| Kent 2009 | C5, C6 | CPR-based F-D ages 8-22yo: 309±55N at 39±5mm (n=18) | [x] VERIFIED |
+| Kent 2010 | C5, C8 | "No experimental data exist"; scaling doesn't work | [x] VERIFIED |
+| Kent 2012 | C6 | PMHS response targets ages 6-7yo | [x] VERIFIED |
+| Nysæther 2009 | C5 | Expert consensus on infant stiffness but N/mm unpublished | [x] VERIFIED |
 
 ### Own Data (verify data files exist and analysis correct)
 
@@ -199,6 +212,6 @@ Nice to have:
 *Registry created: 2026-01-15*
 *Scope change: 2026-01-15 — Infant ventilation focus (DR-001)*
 *Scope revision: 2026-01-16 — Added infant compression (descriptive) per DR-001 rev.*
-*Updated: 2026-01-21 — Added I4 (O'Reilly 2024), I5 (Thielen 2017)*
-*Current: 10/18 claims verified (56%), 6/10 P0 verified (60%)*
+*Updated: 2026-01-21 — Added I4, I5, C5 (P0), C6, C8 from literature search; infant stiffness gap definitively confirmed*
+*Current: 13/21 claims verified (62%), 7/11 P0 verified (64%)*
 *Remaining P0: M1, M2 (own work), RV1-RV3, RC1-RC2 (own data - pending experiments)*
