@@ -63,12 +63,43 @@ python diagnose_elpress.py
 
 ## PROPAR Parameters
 
-| Parameter | ID | Description |
-|-----------|-----|-------------|
-| measure | - | Gauge pressure reading (mbar) |
-| delta-p | 153 | Atmospheric reference (~1013 mbar) |
-| capacity | 21 | Full scale range |
-| ident | 175 | Device identification (9 = DEPC) |
+### Measurement Values
+
+| Param | Name | Example | Description |
+|-------|------|---------|-------------|
+| 8 | fmeasure | 23 | Gauge pressure (mbar) - same as `measure` |
+| 153 | delta-p | 1.013 | Atmospheric reference (bar) |
+| 250 | (absolute?) | 1006.6 | Possibly absolute pressure (mbar) |
+
+### Device Information
+
+| Param | Name | Example | Description |
+|-------|------|---------|-------------|
+| 1 | serial | SNM15211829B | Serial number string |
+| 90 | type | DEPC | Device type (Digital Electronic Pressure Controller) |
+| 91 | model | P-502C-350R-RGD-33-V | Full model number |
+| 92 | serial_alt | M15211829B | Alternative serial |
+| 94 | cal_date | 25,11,2015 | Calibration date |
+| 105 | firmware | V1.21d | Firmware version |
+| 129 | unit | mbar(g) | Measurement unit |
+| 175 | ident | 9 | Device identification (9 = DEPC) |
+
+### Configuration
+
+| Param | Name | Example | Description |
+|-------|------|---------|-------------|
+| 21 | capacity | 200.0 | Capacity setting |
+| 25 | fluid | AiR | Configured fluid/gas |
+| 139 | full_scale | 100.0 | Full scale range (mbar) |
+| 167 | capacity_100 | 100.0 | 100% capacity value |
+| 246 | baro_press | 1.013 | Barometer pressure (bar) |
+
+### Setpoint (Controller Mode)
+
+| Param | Name | Example | Description |
+|-------|------|---------|-------------|
+| 9 | fsetpoint | 0 | Flow/pressure setpoint |
+| setpoint | - | 0 | Setpoint attribute |
 
 ## Files
 
@@ -92,6 +123,37 @@ Or use the included venv:
 ```bash
 source venv/bin/activate
 ```
+
+---
+
+## Sensor Specifications (from device)
+
+| Parameter | Value |
+|-----------|-------|
+| Model | P-502C-350R-RGD-33-V |
+| Type | DEPC (Digital Electronic Pressure Controller) |
+| Range | 0-100 mbar (gauge) |
+| Unit | mbar(g) |
+| Fluid | Air |
+| Firmware | V1.21d |
+| Factory calibration | 25 Nov 2015 |
+
+## Troubleshooting
+
+### Serial errors (Bad file descriptor)
+- USB cable may have disconnected
+- Another process may be using the port
+- Solution: Reconnect USB, restart script
+
+### No response on any node
+- Check power (24V required)
+- Check RS232 adapter connection
+- Try different baud rates (default 38400)
+
+### Readings drift
+- Allow 30 min warm-up
+- Re-tare after warm-up
+- Check for temperature changes
 
 ---
 
