@@ -46,6 +46,7 @@ Much of the literature search was already done for the Proposition paper. Key da
 
 | Paper | Key Data | PDF | Notes |
 |-------|----------|-----|-------|
+| **Thielen et al. 2017** | Human-like thorax design; classical manikins linear, humans nonlinear | [x] | TU Eindhoven; Gruben F-D polynomial model |
 | **Le Rolle et al. 2008** | Newborn lamb vs adult respiratory parameters | [x] | Lamb Cl=0.009, Ccw=0.013 L/cmH₂O |
 | **Fresnel et al. 2014** | Pmus model for mechanical lung testing | [x] | Methodology for ventilator bench testing |
 | **Athanasiades et al. 2000** | Nonlinear lung model | [x] | Energy analysis approach |
@@ -67,6 +68,7 @@ Much of the literature search was already done for the Proposition paper. Key da
 
 | Paper | Year | Key Data | PDF | Priority |
 |-------|------|----------|-----|----------|
+| **O'Reilly et al.** | 2024 | Machine vs human CC in piglets: force profile > depth | [x] | **OBTAINED** |
 | **Japan CC depth** | 2024 | Target depth 0mo=2.7cm, 2mo=2.9cm (shallower than guidelines!) | [x] Web | **OBTAINED** |
 | **SURV1VE Trial** | 2024 | Sustained inflation + CC vs 3:1 ratio in newborns | [x] Web | **OBTAINED** |
 | **Novel CC technique** | 2025 | 92.4% adequate rate with novel technique | [x] Web | **OBTAINED** |

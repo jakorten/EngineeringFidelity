@@ -1,7 +1,7 @@
 # Claim Registry
 
 **Paper:** Engineering Fidelity of Infant CPR Manikins (MST Special Issue)
-**Last Updated:** 2026-01-16 (DR-001 scope revision)
+**Last Updated:** 2026-01-21 (Added O'Reilly 2024, Thielen 2017)
 **Thesis:** Data-driven reference model enables objective evaluation of infant manikin fidelity
 
 **Scope:** Infant ventilation (primary, with fidelity index) + Infant compression (secondary, descriptive) — per DR-001 rev.
@@ -13,9 +13,9 @@
 | Priority | Total | Verified | Needs Evidence | Coverage |
 |----------|-------|----------|----------------|----------|
 | P0 | 10 | 6 | 4 | 60% |
-| P1 | 5 | 2 | 3 | 40% |
+| P1 | 7 | 4 | 3 | 57% |
 | P2 | 1 | 0 | 1 | 0% |
-| **Total** | **16** | **8** | **8** | **50%** |
+| **Total** | **18** | **10** | **8** | **56%** |
 
 **Target:** >=85% overall, 100% P0
 
@@ -30,8 +30,10 @@
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
 | I1 | Engineering fidelity concept links to perspective paper | P1 | Proposition paper | [ ] |
-| I2 | No systematic benchmark exists for infant manikin ventilation | P0 | Literature gap | [x] VERIFIED: Reiss 2015 calls for manikin C/R characterization but none exists |
+| I2 | No systematic benchmark exists for infant manikin ventilation | P0 | Literature gap | [x] VERIFIED: Reiss 2015 calls for manikin C/R characterization but none exists; Thielen 2017: "even SimMan 3G and Apollo do not fulfil all requirements" |
 | I3 | First data-driven reference model for infant manikin ventilation | P0 | Novelty claim | [x] VERIFIED: No infant manikin ventilation benchmark found in literature |
+| I4 | Force application profile affects outcomes independently of depth | P1 | O'Reilly 2024 | [x] VERIFIED: Piglet model (n=12): machine CC at 32% depth > human CC at 38% depth for stroke volume and LV contractility |
+| I5 | Classical manikins have linear F-D; humans have nonlinear F-D | P1 | Thielen 2017, Tomlinson 2007 | [x] VERIFIED: Thielen: manikins have only k₂≠0, humans have k₂,k₃,k₄≠0; Tomlinson: progressivity 1.41±0.25 |
 
 ### Section 2: Human Reference Model -- Infant Ventilation Mechanics
 
@@ -78,7 +80,7 @@
 
 | ID | Claim | Priority | Source | Status |
 |----|-------|----------|--------|--------|
-| C5 | Infant chest compression mechanics are uncharacterized in literature | P1 | Babic 2017 | [x] VERIFIED: "Little research performed on pediatric chest mechanics" |
+| C5 | Infant chest compression mechanics are uncharacterized in literature | P1 | Babic 2017, O'Reilly 2024 | [x] VERIFIED: Babic 2017: "Little research performed on pediatric chest mechanics"; O'Reilly 2024 used piglet model due to lack of human infant data |
 | C7 | Infant compression depth varies with age (2.7 cm at 0-2 mo) | P1 | Ikeyama 2024 (n=555) | [x] VERIFIED: 0-2mo: 2.7cm, 49% over-compressed at 4cm target |
 
 ### Section 6: Engineering Fidelity Index
@@ -121,6 +123,8 @@ The following claims were verified but excluded due to infant-only focus. Preser
 | Nysæther 2008 | `/research/articles/md_out/Manikins_With_Human_Like_Chest_Propertie.md` |
 | Ikeyama 2024 | `input_JV/literature/pdfs/ikeyama_2024_infant_cc_depth.pdf` |
 | Diedericks 2025 | `input_JV/literature/pdfs/diedericks_2025_chest_wall.pdf` |
+| O'Reilly 2024 | `input_JV/literature/pdfs/oreilly_2024_machine_vs_human_cc.pdf` |
+| Thielen 2017 | `input_JV/literature/pdfs/thielen_2017_humanlike_thorax.pdf` |
 
 ---
 
@@ -141,6 +145,8 @@ These claims, if wrong, break the paper:
 ### P1 (Important) -- Target 90%
 
 Strengthen but don't break argument:
+- I4: Force profile importance (supports mechanical fidelity concept)
+- I5: Linear vs nonlinear F-D gap (supports mechanical fidelity concept)
 - V3: Chest wall compliance context
 - U1-U2: Envelope methodology
 - M3: Variation analysis
@@ -167,6 +173,8 @@ Nice to have:
 | Stoecklin 2024 | V3 | Preterm Ccw/CL ratio ~3:1 | [x] VERIFIED |
 | Diedericks 2025 | V3 | Review: CCW ~3× CL term, ~5× preterm | [x] VERIFIED |
 | Reiss 2015 | I2, D2 | Call for manikin C/R characterization | [x] VERIFIED |
+| O'Reilly 2024 | I4, C5 | Force profile > depth (piglet n=12); used animal model due to human data gap | [x] VERIFIED |
+| Thielen 2017 | I2, I5 | SimMan/Apollo inadequate; classical manikins linear vs human nonlinear F-D | [x] VERIFIED |
 
 ### Own Data (verify data files exist and analysis correct)
 
@@ -191,5 +199,6 @@ Nice to have:
 *Registry created: 2026-01-15*
 *Scope change: 2026-01-15 — Infant ventilation focus (DR-001)*
 *Scope revision: 2026-01-16 — Added infant compression (descriptive) per DR-001 rev.*
-*Current: 8/21 claims verified (38%), 6/12 P0 verified (50%)*
+*Updated: 2026-01-21 — Added I4 (O'Reilly 2024), I5 (Thielen 2017)*
+*Current: 10/18 claims verified (56%), 6/10 P0 verified (60%)*
 *Remaining P0: M1, M2 (own work), RV1-RV3, RC1-RC2 (own data - pending experiments)*
