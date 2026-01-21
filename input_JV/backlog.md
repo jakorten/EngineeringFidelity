@@ -243,3 +243,18 @@ See: `working/DR-004_framework_terminology.md`
    Use:      Airway pressure (Paw) measurement, infant ventilation
    Interface: RS232 or Modbus (compatible with existing MFM setup)
    ```
+
+### Session 2026-01-21 (Literature & Gap Confirmation)
+- [x] Inventorized O'Reilly 2024 — machine vs human CC in piglets; force profile > depth
+- [x] Inventorized Thielen 2017 — human-like thorax design; classical manikins linear, humans nonlinear
+- [x] Added claims I4 (force profile), I5 (linear vs nonlinear gap)
+- [x] **Confirmed infant chest stiffness gap definitively:**
+  - Kent 2010: "No experimental data exist" for pediatric F-D
+  - Kent 2009: Youngest data ages 8-22yo (n=18)
+  - Kent 2012: PMHS ages 6-7yo (youngest available)
+  - Nysæther 2009: Expert consensus but N/mm unpublished
+  - Kent 2010: Adult-to-pediatric scaling fails
+- [x] Upgraded C5 to P0; added C6, C8
+- [x] Claim registry: 13/21 verified (62%), 7/11 P0 (64%)
+- [x] Validated DR-001 scope (ventilation fidelity index, compression descriptive only)
+- [x] Decided NOT to attempt scaling — would undermine C8 claim
