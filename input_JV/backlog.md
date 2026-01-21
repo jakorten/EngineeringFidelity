@@ -29,7 +29,7 @@
 
 ### Experimental Planning
 - [ ] Define manikin test matrix (which manikins, how many replicates)
-- [x] Confirm compression apparatus availability — **Load cell installed, needs firmware integration**
+- [x] Confirm compression apparatus availability — **DONE: Load cell firmware complete, verified ±0.13 N accuracy**
 - [~] Design/source ventilation measurement apparatus — **Need MPXV5010DP (~€10) for airway pressure; SDP810+MFM for flow ready**
 - [ ] Create experimental protocol document
 - [ ] Plan data file naming convention
@@ -63,19 +63,25 @@
 
 ## Delayed Decisions
 
-### DR-001: Reference Model Scope (DECIDED — REVISED)
-**Decision:** Infant ventilation (primary) + Infant compression (secondary)
+### DR-001: Reference Model Scope (DECIDED — REVISED 2026-01-18)
+**Decision:** Infant ventilation (primary) + Infant compression (primary)
 
 **Rationale:**
 - Only infant manikins available
 - Test equipment suitable for infant manikins only
 - Human reference exists for infant ventilation (Huang 2016, n=205)
-- No human reference exists for infant compression — characterization is **descriptive only**
-- Strongest novelty: no prior infant manikin ventilation benchmark
+- Animal surrogate reference for infant compression via:
+  - **Route A:** Schmölzer piglet data (request existing force-displacement)
+  - **Route B:** LUMC lamb measurements (perform ourselves)
+
+**Piglet reference available:**
+- Weight: 2.12 ± 0.17 kg (matches term infant)
+- Age: 0-3 days, validated CPR model
+- Force recorded in experiments → can extract stiffness
 
 **Implications:**
 - Ventilation: fidelity index against human reference (Huang 2016)
-- Compression: descriptive characterization (force-displacement curves, stiffness)
+- Compression: fidelity index against animal surrogate reference
 - DYMH-103 load cell (0-49 N) suitable for infant compression (14-30 N range)
 - Bronkhorst EL-PRESS P-502C for airway pressure
 
@@ -87,6 +93,17 @@ See: `DR-001_reference_model_scope.md`
 **Status:** Sufficient manikins available (own inventory + WKZ access)
 
 **Action:** Define test matrix - which models, how many units per model
+
+### DR-004: Framework Terminology (DECISION NEEDED)
+**Decision needed:** What to call the framework?
+
+**Options:**
+- **A:** Mechanical Fidelity Assessment
+- **B:** Quantitative Fidelity Framework
+
+**Context:** "Engineering fidelity" is confusing—conflates with visual "high fidelity." Need terminology that emphasizes mechanical response vs appearance.
+
+See: `working/DR-004_framework_terminology.md`
 
 ### DR-003: Lamb Reference Data (IN PROGRESS)
 **Decision needed:** Can lamb chest compression data serve as reference for infant manikin validation?
@@ -110,7 +127,7 @@ See: `DR-001_reference_model_scope.md`
 | Name | Affiliation | Role | Notes |
 |------|-------------|------|-------|
 | Prof. dr. dr. Egon L. van den Broek | - | Promotor | |
-| Dr. Jeroen Veen | - | Promotor | |
+| Dr. Jeroen Veen | - | Co-promotor | |
 | Timo de Raad | WKZ, NRR, ERC | Co-author | Clinical/resuscitation expertise |
 | Prof. dr. Arjen ten Pas | LUMC | Advisor | Potential lamb data provider (DR-003) |
 | Jozua van Duuren | WKZ | Co-author/Advisor | Specialized nurse, involved in prior papers |
@@ -171,14 +188,49 @@ See: `DR-001_reference_model_scope.md`
 - [x] DYMH-103 load cell (0-49 N) confirmed suitable for infant compression (14-30 N)
 - Next: DR-002 (manikin inventory), load cell integration, experimental protocol
 
+### Session 2026-01-19 (Load Cell Integration)
+- [x] **Load cell firmware completed and verified**
+  - STM32F405 + HX711 (Sparkfun red) + DYMH-103 (0-5 kg)
+  - Pin config: DAT→PB10, CLK→PB11, VDD+VCC→3.3V
+  - Custom firmware: TARE, CAL (kg input), START/STOP streaming, READ, RAW, STATUS
+  - Source: `software/loadcell/`
+- [x] **HX711 wiring issue resolved**
+  - Problem: VDD (3.3V) and VCC (5V) on different rails
+  - Solution: Both VDD and VCC to 3.3V
+- [x] **Calibration verified** (preliminary, with kitchen-weighed masses)
+
+  | Gewicht | Verwacht | Gemeten | Fout |
+  |---------|----------|---------|------|
+  | 0 g | 0.00 N | 0.007 N | +0.007 N ✓ |
+  | 301 g | 2.95 N | 3.081 N | +0.13 N |
+  | 1.501 kg | 14.72 N | 14.691 N | -0.03 N ✓ |
+  | 2.001 kg | 19.63 N | 19.628 N | -0.002 N ✓ |
+
+  **Result:** Max error 0.13 N at low range, <0.035 N in working range (14-30 N). Within ±0.5 N spec.
+
+- [x] **Calibration protocol created** — `software/loadcell/CALIBRATION.md`
+- [x] **DR-005 created** — Acknowledgements registry
+  - Herold Cremer (HAN): calibration weights, F1 class (kg range) available next week
+  - Dr. Gertjan Lugthart (LUMC Pediatrics): facilitating collaboration
+  - Arjan Bikkel, Peter Brouwer (Bronkhorst): pressure/flow sensor support
+- [x] **3D printed calibration extension available** — `Calibration extension for Compression Actuator Load Cell.stl`
+
+**Next steps:**
+- Final calibration with Herold Cremer's F1 weights (volgende week)
+- Begin manikin compression characterization
+
 ---
 
 ## Next Session Priorities
 
-1. **MPXV5010GP ×5 ordered** (2026-01-15) — pin-compatible replacement for MPXV5050
+1. ~~**Load cell firmware integration**~~ — **DONE** ✓
+2. **Final calibration with F1 weights** (Herold Cremer, HAN) — volgende week
+3. **Inventory infant manikins** (DR-002)
+4. **MPXV5010GP ×5 ordered** (2026-01-15) — pin-compatible replacement for MPXV5050
    - 0-10 kPa range, ±0.25 kPa accuracy
    - Backup / blocked airway detection
-2. **Bronkhorst: EL-PRESS (0-100 mbar) confirmed** (2026-01-16)
+5. **Verify FLEXI-FLOW flow range setting** — currently 2 ln/min (TBC), may need 0.5 ln/min for infant volumes
+6. **Bronkhorst: EL-PRESS (0-100 mbar) confirmed** (2026-01-16)
    - Bronkhorst will provide overpressure sensor
    - SI-traceable, factory calibrated
    - Primary sensor for Paw measurement + calibration reference
@@ -191,11 +243,3 @@ See: `DR-001_reference_model_scope.md`
    Use:      Airway pressure (Paw) measurement, infant ventilation
    Interface: RS232 or Modbus (compatible with existing MFM setup)
    ```
-3. **Inventory infant manikins** (DR-002)
-4. **Load cell firmware integration** — hardware ready
-   - DYMH-103 (0-5kg = 0-49N) — suitable for infant compression (14-30 N)
-   - HX711 ADC (Sparkfun, 24-bit) — available
-   - STM32F405 — needs firmware update for HX711 readout
-   - **WAITING:** Calibration weights availability check (HAN lab)
-   - TODO: Wire HX711 → STM32, add readout code, calibrate
-5. ~~Decision on reference model scope (DR-001)~~ — **DECIDED: infant ventilation (primary) + compression (secondary)**
