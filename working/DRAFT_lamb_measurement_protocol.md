@@ -57,10 +57,12 @@ Measure force-displacement characteristics of lamb chest to establish reference 
 - STM32F405 data acquisition
 
 ### To prepare
-- Compression plunger (~30 mm diameter, flat or slightly curved)
+- ~~Compression plunger (~30 mm diameter, flat or slightly curved)~~ **AVAILABLE:** `Compression Actuator extension.stl` (20mm diameter, see `hardware/`)
 - Positioning support/jig
 - Calipers for chest measurement
 - Power supply / extension cables for LUMC setup
+
+**Actuator note:** 20mm diameter matches two-thumb contact area and Schmölzer 2023 mechanical CC design.
 
 ### Backup: Portable IMU setup (if CNC impractical)
 - Bosch BHI360 IMU (6-axis + sensor fusion)

@@ -11,7 +11,9 @@ I am writing regarding your recent publication "Comparison of hemodynamic effect
 
 **Our research context:**
 
-We are developing an engineering fidelity framework for infant CPR training manikins at HAN University of Applied Sciences (Netherlands), in collaboration with clinical partners at WKZ (Wilhelmina Children's Hospital) and LUMC. Our goal is to establish reference mechanical properties (stiffness, damping) against which infant manikins can be objectively evaluated.
+We are developing a mechanical fidelity assessment framework for infant CPR training manikins at HAN University of Applied Sciences (Netherlands), in collaboration with clinical partners at WKZ (Wilhelmina Children's Hospital) and LUMC.
+
+Traditional "high-fidelity" manikins are classified by visual realism—a manikin may look like an infant without responding like one. Our goal is to establish reference mechanical properties (stiffness, damping) against which infant manikins can be objectively evaluated for how they *respond* to chest compressions.
 
 **The gap we've identified:**
 
@@ -55,7 +57,7 @@ HAN University of Applied Sciences
 
 **Research team:**
 - Prof. dr. dr. Egon L. van den Broek (Promotor)
-- Dr. Jeroen Veen (Promotor)
+- Dr. Jeroen Veen (Co-promotor)
 - Timo de Raad (WKZ, NRR, ERC)
 - Prof. dr. Arjen ten Pas (LUMC)
 - Jozua van Duuren (WKZ)

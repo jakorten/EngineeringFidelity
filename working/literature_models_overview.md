@@ -373,6 +373,14 @@ Where:
 - Stiffness: 4.8 N/mm initially, 2.9 N/mm after 200 compressions (Neurauter 2009)
 - Well-established for CPR research
 
+**Key piglet reference - Schmölzer 2023:**
+- O'Reilly M, Schmölzer GM et al. (2023). *Comparison of hemodynamic effects of chest compression delivered via machine or human in asphyxiated piglets*. Pediatric Research.
+- Weight: 2.12 ± 0.17 kg (matches term infant)
+- Age: 0-3 days (neonatal)
+- Force recorded during mechanical compressions
+- **Potential data source:** Force-displacement data for stiffness calculation
+- Contact: georg.schmoelzer@me.com (email draft ready)
+
 **Lamb model:**
 - Ideal for fetal-to-neonatal transition studies
 - Used for ventilation/oxygenation research (fluid-filled → air-filled lungs)
@@ -496,8 +504,9 @@ Where:
 9. Ruiz de Gauna S et al. (2023). Characterization of mechanical properties of adult chests. Comput Methods Programs Biomed 242:107847.
 10. Neurauter A et al. (2009). Comparison of mechanical characteristics of the human and porcine chest. Resuscitation.
 
-### Compression Reference Data (Infant) - PENDING
-11. Lamb data from Arjen ten Pas (LUMC) - awaiting DR-003
+### Compression Reference Data (Infant/Neonatal Animal Surrogate)
+11. O'Reilly M, Schmölzer GM et al. (2023). Comparison of hemodynamic effects of chest compression delivered via machine or human in asphyxiated piglets. *Pediatric Research*. doi:10.1038/s41390-023-2827-1
+12. Lamb data from Arjen ten Pas (LUMC) - awaiting DR-003
 
 ---
 

@@ -10,7 +10,9 @@
 
 ## Proposed Title
 
-> "Engineering Fidelity of CPR Training Manikins: A Data-Driven Reference Model for Chest Compression and Ventilation Mechanics"
+> "Mechanical Fidelity of CPR Training Manikins: A Data-Driven Reference Model for Chest Compression and Ventilation Mechanics"
+
+**Note:** "Mechanical fidelity" emphasizes that we assess how the manikin *responds* (stiffness, compliance, damping), not how it *looks*. Traditional "high-fidelity" refers to visual realism—a manikin may look like an infant without responding like one. See DR-004 for terminology decision.
 
 ---
 
@@ -40,7 +42,8 @@ Human Reference Model          →    Manikin Characterization    →    Fidelit
 ## Paper Structure
 
 ### 1. Introduction
-- Engineering fidelity concept (link to perspective paper)
+- Mechanical fidelity concept: response vs appearance (link to perspective paper)
+- Key framing: "A manikin may look like an infant without responding like one"
 - Gap: no systematic benchmark for manikin mechanical properties
 - Contribution: first data-driven reference model for compressions AND ventilations
 
@@ -82,7 +85,7 @@ Human Reference Model          →    Manikin Characterization    →    Fidelit
 
 - Human data shows natural variability
 - Reference model should define acceptable RANGE, not single target
-- Manikins within envelope = adequate engineering fidelity
+- Manikins within envelope = adequate mechanical fidelity
 - Manikins outside envelope = quantified fidelity gap
 
 ### 4. Manikin Characterization Protocol
@@ -120,13 +123,15 @@ Human Reference Model          →    Manikin Characterization    →    Fidelit
 - Same-model replicates: how consistent?
 - Implications for training standardization
 
-### 6. Engineering Fidelity Index
+### 6. Mechanical Fidelity Index
 
 Propose a quantified metric for manikin selection:
-- Compression fidelity score
-- Ventilation fidelity score
-- Combined engineering fidelity index
+- Compression fidelity score (deviation from reference stiffness/damping)
+- Ventilation fidelity score (deviation from reference compliance/resistance)
+- Combined mechanical fidelity index
 - Actionable for procurement decisions
+
+**Note:** Per VIM, "accuracy" cannot be given a numerical value. We define "fidelity index" as our own metric: normalized deviation from human reference values.
 
 ### 7. Discussion
 
@@ -139,8 +144,9 @@ Propose a quantified metric for manikin selection:
 ### 8. Conclusion
 
 - Data-driven reference model enables objective manikin evaluation
-- Engineering fidelity can now be quantified, not assumed
-- Call for manufacturer transparency
+- Mechanical fidelity can now be quantified, not assumed
+- Distinguishes mechanical response from visual appearance
+- Call for manufacturer transparency on mechanical properties
 
 ---
 
@@ -189,6 +195,12 @@ Propose a quantified metric for manikin selection:
 - Thielen M et al. (2017). Innovative design for CPR manikins based on human-like thorax. *Proc Inst Mech Eng H*. 231(3):243-249.
 - Papastamelos C et al. (1995). Developmental changes in chest wall compliance. *J Appl Physiol*. 78(1):179-184.
 
+### Animal Surrogate (Neonatal Compression)
+- O'Reilly M, Schmölzer GM et al. (2023). Comparison of hemodynamic effects of chest compression delivered via machine or human in asphyxiated piglets. *Pediatric Research*. doi:10.1038/s41390-023-2827-1.
+  - Neonatal piglet model: 2.12 ± 0.17 kg, 0-3 days old
+  - Validated CPR model matching term infant weight
+  - Force recorded during mechanical compressions (stiffness derivable)
+
 ### Ventilation Mechanics
 - Huang J et al. (2016). Reference values for resistance and compliance in healthy infants. *J Thorac Dis*. 8(3):513-519.
 - Battisti O et al. (2012). Lung compliance and airways resistance in healthy neonates. *Pediatr Therapeut*. 2(2):114.
@@ -201,3 +213,4 @@ Propose a quantified metric for manikin selection:
 - Unique contribution: first systematic compression + ventilation benchmark
 - Data-centric framing required for special issue fit
 - Consider physics-informed modeling component for stronger fit
+- **Terminology:** "Mechanical fidelity" chosen to contrast with visual "high fidelity" (see DR-004)

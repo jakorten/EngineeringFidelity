@@ -6,7 +6,9 @@
 
 ## Paper Overview
 
-**Title:** "Engineering Fidelity of CPR Training Manikins: A Data-Driven Reference Model for Chest Compression and Ventilation Mechanics"
+**Title:** "Mechanical Fidelity of CPR Training Manikins: A Data-Driven Reference Model for Chest Compression and Ventilation Mechanics"
+
+**Key framing:** Traditional "high-fidelity" = visual realism (looks like an infant). Our approach = mechanical fidelity (responds like an infant). *A manikin may look like an infant without responding like one.*
 
 **Target:** Measurement Science and Technology - Special Issue on *"Data-Centric Exploration and Explanation of Physical and Engineering Phenomena"*
 
@@ -82,7 +84,7 @@
 
 ### Phase 3: Analysis & Writing (3-4 weeks)
 - [ ] Reference model fitting with uncertainty envelope
-- [ ] Engineering fidelity index calculation
+- [ ] Mechanical fidelity index calculation
 - [ ] Draft all sections
 - [ ] Co-author review and revision
 
@@ -125,7 +127,7 @@ Resuscitation (in prep)     → Conceptual framework (perspective)
 MST (in progress)           → Technical benchmark methodology  ← THIS PAPER
 ```
 
-The perspective paper argues *for* engineering fidelity; **this MST paper provides the tools to measure it.**
+The perspective paper argues *for* mechanical fidelity assessment; **this MST paper provides the tools to measure it.**
 
 ---
 
@@ -134,7 +136,9 @@ The perspective paper argues *for* engineering fidelity; **this MST paper provid
 This paper fills a critical gap: while compression mechanics have some prior characterization (Baubin 1995, Nysæther 2008), **no systematic benchmark exists that:**
 1. Tests multiple commercial manikins against human reference data
 2. Includes ventilation mechanics (compliance, resistance)
-3. Provides a quantitative fidelity index for procurement decisions
+3. Provides a quantitative mechanical fidelity index for procurement decisions
+
+**Key distinction:** We assess how manikins *respond* mechanically (stiffness, compliance, damping), not how they *look*. This "mechanical fidelity" contrasts with traditional "high-fidelity" based on visual realism.
 
 The ventilation fidelity angle is particularly novel—Reiss 2015 explicitly called for manikin compliance/resistance characterization, but no such work has been published.
 

@@ -8,7 +8,7 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Repository Overview
 
-This repository contains the **Engineering Fidelity Paper** - a technical measurement science paper on CPR manikin characterization.
+This repository contains the **Mechanical Fidelity Paper** - a technical measurement science paper on CPR manikin characterization.
 
 **Target:** Measurement Science and Technology - Special Issue on "Data-Centric Exploration and Explanation of Physical and Engineering Phenomena"
 
@@ -18,12 +18,16 @@ This repository contains the **Engineering Fidelity Paper** - a technical measur
 
 ## Core Concept
 
-Build a **human reference model** from medical/clinical literature for both chest compressions and ventilations, then systematically compare multiple CPR training manikins against that model to quantify the "engineering fidelity gap."
+**Key distinction:** Traditional "high-fidelity" manikins are classified by *visual realism* (looks like an infant). Our work focuses on *mechanical fidelity* (responds like an infant). A manikin may look like an infant without responding like one.
+
+Build a **human reference model** from medical/clinical literature for both chest compressions and ventilations, then systematically compare multiple CPR training manikins against that model to quantify the mechanical fidelity gap.
 
 ```
 Human Reference Model          ->    Manikin Characterization    ->    Fidelity Gap Analysis
-(from medical literature)            (empirical testing)              (model vs. reality)
+(from medical literature)            (empirical testing)              (mechanical response)
 ```
+
+**Terminology (see DR-004):** "Mechanical fidelity" emphasizes response properties (stiffness, compliance, damping) rather than appearance.
 
 ---
 
@@ -110,10 +114,10 @@ See `input_JV/METHODOLOGY.md` for full details.
 
 | Repository | Purpose | Relationship |
 |------------|---------|--------------|
-| **Proposition** | Perspective paper on engineering fidelity framework | Provides conceptual framework |
+| **Proposition** | Perspective paper on mechanical fidelity concept | Provides conceptual framework |
 | **This repo** | Technical methodology + empirical data | Provides measurement tools |
 
-The Proposition paper argues FOR engineering fidelity; this MST paper provides the TOOLS to measure it.
+The Proposition paper argues FOR mechanical fidelity assessment; this MST paper provides the TOOLS to measure it.
 
 ---
 
@@ -131,4 +135,4 @@ pdflatex paper/main.tex
 
 ---
 
-*Last updated: 2026-01-15*
+*Last updated: 2026-01-18*
