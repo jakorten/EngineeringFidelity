@@ -31,7 +31,7 @@
 - [ ] Define manikin test matrix (which manikins, how many replicates)
 - [x] Confirm compression apparatus availability — **DONE: Load cell firmware complete, verified ±0.13 N accuracy**
 - [~] Design/source ventilation measurement apparatus — **Need MPXV5010DP (~€10) for airway pressure; SDP810+MFM for flow ready**
-- [ ] Create experimental protocol document
+- [x] Create experimental protocol document — **DONE: `protocols/ventilation_fidelity_measurement_tutorial.md`**
 - [ ] Plan data file naming convention
 - [ ] Create BOM (Bill of Materials) for compression apparatus
 - [ ] Create BOM (Bill of Materials) for ventilation apparatus
@@ -280,3 +280,13 @@ See: `working/DR-004_framework_terminology.md`
   - Infant < 1 yr: 2.86 ± 1.06
   - Child > 1 yr: 1.33 ± 0.36
   - Ratio **decreases** with age (chest wall stiffens via rib ossification)
+- [x] **Verified Huang 2016 age basis:** Postnatal (not gestational) — term infants only (GA ≥37 wks)
+- [x] **Found supporting sources:**
+  - Stoecklin 2024: Preterm Crs/CL/Ccw at 36 wks PMA (no resistance data)
+  - Diedericks 2025: Review with te Pas (LUMC) as co-author
+- [x] **Created consolidated literature document:** `input_JV/literature/ventilation_reference_model_sources.md`
+- [x] **Updated measurement tutorial with:**
+  - Continuous flow method (Section 6.5) — recommended approach
+  - Pneumatic supply chain: MS2-LFR → EL-PRESS → MFM → Manikin (Section 4.3)
+  - Pressure range analysis: 10-50 mbar typical, max ~100 mbar
+  - Updated quick reference card
