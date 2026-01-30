@@ -1,7 +1,7 @@
 ---
 status: DECIDED
 date: 2026-01-15
-updated: 2026-01-16
+updated: 2026-01-30
 decision: Option D - Infant Ventilation (Primary) + Compression (Secondary)
 ---
 
@@ -109,6 +109,38 @@ The paper needs to define what human reference data to include and what manikins
 - [ ] Check with Mark Thielen about extending methodology to infant scale
 - [ ] Consider polynomial model (Gruben) for compression characterization
 - [ ] Add discussion section on "measurement gap" for infant chest mechanics
+
+---
+
+## Update 2026-01-30: Model Variables and Age Parameterization
+
+### Model Variables
+
+| Model | Variable 1 | Variable 2 | Notes |
+|-------|------------|------------|-------|
+| **Ventilation** | Compliance (C) [mL/kPa] | Resistance (R) [kPa/L/s] | Standard respiratory mechanics |
+| **Compression** | Stiffness (k) [N/mm] | Damping (d) [N·s/mm] | At standardized depth; may add progressivity |
+
+### Age-Dependent Parameterization
+
+Models must be configurable by infant age category:
+
+| Category | Ccw/CL Ratio | C (mL/kPa) | R (kPa/L/s) | Source |
+|----------|--------------|------------|-------------|--------|
+| Preterm | ~5:1 | — | — | Diedericks 2025, Gerhardt 1980 |
+| Term (newborn) | ~3:1 | 78 | 6.4 | Stoecklin 2024, Gerhardt 1980, Huang 2016 |
+| Infant < 1 year | ~2.9:1 | — | — | Papastamelos 1995 (n=5) |
+| Child > 1 year | ~1.3:1 | 171 | 3.7 | Papastamelos 1995 (n=7), Huang 2016 |
+| Adult | ~1:1 | — | — | — |
+
+**Note:** Ccw/CL ratio **decreases** with age as chest wall stiffens (rib ossification). By ~2 years, chest wall and lung compliance are approximately equal.
+
+> **WARNING — Terminology confusion:**
+> Do not confuse **Ccw/CL ratio** (physiological chest wall vs lung compliance) with the **15:2 compression:ventilation ratio** (CPR protocol). The NRR protocol uses 15:2 for infant CPR technique — this is unrelated to mechanical compliance properties.
+
+### Excluded from Infant Model
+
+- **Dynamic softening** (Ruiz de Gauna 2023: −34.6% over 3000 compressions) — adult phenomenon only, not applicable to infant chest
 
 ---
 

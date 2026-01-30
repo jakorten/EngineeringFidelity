@@ -33,6 +33,9 @@
 - [~] Design/source ventilation measurement apparatus — **Need MPXV5010DP (~€10) for airway pressure; SDP810+MFM for flow ready**
 - [ ] Create experimental protocol document
 - [ ] Plan data file naming convention
+- [ ] Create BOM (Bill of Materials) for compression apparatus
+- [ ] Create BOM (Bill of Materials) for ventilation apparatus
+- [ ] Update production log: 5× SimModule Single Pressure Sensor (MPXV7002GP) — produced 2026-01-21
 
 ### Data Collection (pending)
 - [ ] Compression characterization -- infant manikins (DYMH-103 load cell)
@@ -258,3 +261,22 @@ See: `working/DR-004_framework_terminology.md`
 - [x] Claim registry: 13/21 verified (62%), 7/11 P0 (64%)
 - [x] Validated DR-001 scope (ventilation fidelity index, compression descriptive only)
 - [x] Decided NOT to attempt scaling — would undermine C8 claim
+
+### Session 2026-01-30 (Model Variables)
+- [x] **Defined model variables:**
+  - Ventilation: Compliance (C) + Resistance (R) — standard respiratory mechanics
+  - Compression: Stiffness (k) + Damping (d) — at standardized depth
+- [x] **Age-dependent parameterization confirmed:**
+  - Preterm: Ccw/CL ~5:1
+  - Term (newborn): Ccw/CL ~3:1
+  - Infant < 1 yr: Ccw/CL ~2.9:1
+  - Child > 1 yr: Ccw/CL ~1.3:1
+- [x] **Excluded dynamic softening** from infant model (adult phenomenon only)
+- [x] Updated DR-001 with model variables and age categories
+- [x] **Caught terminology confusion:** 15:2 is CPR compression:ventilation ratio (NRR protocol), NOT Ccw/CL ratio — added warning to DR-001
+- [x] **Found Ccw/CL ratio by age:** Papastamelos 1995 (J Appl Physiol)
+  - Preterm: ~5:1
+  - Term: ~3:1
+  - Infant < 1 yr: 2.86 ± 1.06
+  - Child > 1 yr: 1.33 ± 0.36
+  - Ratio **decreases** with age (chest wall stiffens via rib ossification)
